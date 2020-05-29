@@ -1,6 +1,70 @@
-/* Style for heading elements */
+/* Style for main heading elements */
 
-.fancy-header {
-    color: purple;
+h1{
+    text-align: center;
+    color: darkblue;
     text-decoration: underline;
 }
+
+p {
+    text-align: center;
+    font-size: 1.5em;
+}
+/* .fancy-header {
+    color: purple;
+    text-decoration: underline;
+}*/
+
+/* Style for heading elements */
+
+h2 {
+    color: darkolivegreen;
+    text-decoration: underline;
+}
+
+/* Style for body elements */
+
+body {
+    background-color: lightgrey;
+    /*background-image: url("../Images/adult-backpack-camera-cloudy-305086.jpg");*/
+    background-attachment: fixed;
+    font-family: Arial, Courier, sans-serif;
+    font-size: 1.25em;
+}
+
+/* Style for Lists */
+
+ul {git
+    list-style: square;
+}
+
+ol {
+    list-style: upper-roman;
+}
+
+/* Style for Tables */
+
+table {
+    font-family: Arial, Courier, sans-serif;
+    font-size: 1em;
+}
+
+/* Style to Anchors */
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:active {
+    color: green;
+}
+
