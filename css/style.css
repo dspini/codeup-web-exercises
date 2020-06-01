@@ -4,6 +4,7 @@ h1{
     text-align: center;
     color: darkblue;
     text-decoration: underline;
+    font-family: "Times New Roman, serif";
 }
 
 p {
@@ -26,15 +27,18 @@ h2 {
 
 body {
     background-color: lightgrey;
-    /*background-image: url("../Images/adult-backpack-camera-cloudy-305086.jpg");*/
     background-attachment: fixed;
     font-family: Arial, Courier, sans-serif;
     font-size: 1.25em;
 }
 
+/*body {
+    background-image: url("../img/adult_backpack.jpg");
+}*/
+
 /* Style for Lists */
 
-ul {git
+ul {
     list-style: square;
 }
 
@@ -44,9 +48,11 @@ ol {
 
 /* Style for Tables */
 
-table {
+table, th, td {
     font-family: Arial, Courier, sans-serif;
     font-size: 1em;
+    border: 1px solid black;
+    padding: 15px;
 }
 
 /* Style to Anchors */
