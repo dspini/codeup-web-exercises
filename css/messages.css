@@ -12,11 +12,9 @@ body, html {
     --main-padding: 15px;
 }*/
 
-.message{
-    height: 20px ;
-    width: 100%;
+.message {
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid lightgrey;
     margin: 10px;
     border-radius: 5px;
 }
