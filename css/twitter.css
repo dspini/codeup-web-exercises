@@ -5,9 +5,11 @@
     --light-bg: #FFF;
     --separator-color: #DDD;
 }
+
 * {
     box-sizing: border-box;
 }
+
 body, html {
     background-color: var(--main-bg);
     height: 100%;
@@ -16,34 +18,117 @@ body, html {
     padding: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+
 header {
     background-image: url("https://picsum.photos/1200/300");
     background-size: cover;
     min-height: 300px;
     padding-top: 275px;
 }
+
 a {
     color: var(--link-color);
 }
+
 .top-nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
     background: var(--light-bg);
 }
+
+.nav-item {
+    display: inline-block;
+    text-align: center;
+    Padding: 1.5em;
+}
+
 .nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+
 .nav-link {
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
 }
+
 .nav-link:hover {
     color: var(--link-color);
 }
+
 .profile {
     background: var(--light-bg);
+    height: 80px;
 }
+
+.profile-form {
+    float: right;
+    line-height: 80px;
+    position: center;
+}
+
+.profile-image {
+    position: absolute;
+    top: 240px;
+}
+
+.container {
+    margin: 2em;
+}
+
+.profile-details {
+    width: calc(25% - 1em);
+    margin-right: .5em;
+    float: left;
+}
+.profile-entry {
+    margin: .5em;
+}
+.profile-items {
+    padding: 0;
+    margin: .5em;
+    list-style: none;
+    text-align: left;
+}
+
+.timeline {
+    text-align: left;
+    padding: .5em;
+    width: calc(50% - .5em);
+    height: 100%;
+    margin-right: .5em;
+    float: left;
+}
+
+.who-to-follow {
+    position: relative;
+    display: inline-block;
+    margin: 0 .5em;
+    width: calc(25% - .5em);
+    float: left;
+}
+
+.media {
+    width: 100%;
+    padding: .5em;
+    overflow: auto;
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--separator-color);
+}
+
+.media-image {
+    width: 50px;
+    margin-top: 1.33em;
+}
+
+.media-body {
+    float: right;
+    width: calc(100% - 50px);
+}
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
