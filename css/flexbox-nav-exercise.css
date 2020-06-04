@@ -1,0 +1,61 @@
+
+body {
+    font-family: "work Sans";
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background: lightslategrey;
+    height: 4.25em
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: inherit;
+    align-items: center;
+}
+nav a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: blue;
+}
+
+nav li {
+    margin: .5em;
+}
+
+li:nth-child(4) {
+    margin-right: auto;
+}
+
+li:nth-child(6) {
+    margin-left: auto;
+}
+
+.logo-item {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: "montserrat";
+    height: inherit;
+    margin: auto;
+    align-content: center;
+}
+
+.logo {
+    padding-top: .2em;
+    padding-bottom: 2em;
+}
+
+li:not(.logo-item) {
+    z-index: 1;
+}
