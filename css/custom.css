@@ -1,0 +1,86 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: none;
+}
+
+/* jumbotron container */
+
+.jumbotron {
+    background-image: url("pizza.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    background-color: white;
+    opacity: .75;
+
+}
+
+h2 {
+    margin-left: 1em;
+}
+
+.nav-tabs {
+    margin-left: 2em;
+}
+
+h4 {
+    display: flex;
+    justify-content: left;
+    background-color: dodgerblue;
+    color: white;
+    padding: 1em;
+}
+
+.card {
+    border: thin;
+    border: grey;
+    border-radius: .5em;
+}
+
+.card-body {
+    padding: 1em;
+    border: thin;
+    border: grey;
+    border-radius: .5em;
+}
+
+.main-header {
+    border-width: thin;
+    border-left-width: thin;
+    border-left-color: lightgray;
+}
+
+h5 {
+    display: flex;
+    justify-content: left;
+    background-color: lightgray;
+    color: black;
+    padding: 1em;
+    border-radius: .5em;
+}
+
+h6 {
+    display: flex;
+    justify-content: left;
+    color: black;
+    padding: 1em;
+}
+
+.navbar {
+    margin: 2em;
+    padding-top: 1em;
+    justify-content: right;
+
+}
