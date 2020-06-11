@@ -1,215 +1,346 @@
 <!doctype html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><!-- TODO: put your title here --></title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <!-- Your custom css styles go here -->
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title><!-- TODO: put your title here --></title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+              integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<!-- Your custom css styles go here -->
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<div>
 <!-- Main page content -->
-<!-- nav bar container -->
-<div class="container d-inline-flex">
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="Pizza world" role="tab"
-               aria-controls="home" aria-selected="true">Pizza world</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="Order online" role="tab"
-               aria-controls="profile" aria-selected="false">Order online</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="Menu" role="tab" aria-controls="contact"
-               aria-selected="false">Menu</a>
-        </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"></div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"></div>
-    </div>
-    <!-- nav forms -->
-    <nav class="navbar navbar-light bg-light">
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you</button>
-        </form>
-    </nav>
-</div>
+
+<!-- navbar container page 1-->
+    <div class="container d-inline-flex">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="Pizza world" role="tab"
+                   aria-controls="home" aria-selected="true">Pizza world</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="Order online" role="tab"
+                   aria-controls="profile" aria-selected="false">Order online</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="Menu" role="tab" aria-controls="contact"
+                   aria-selected="false">Menu</a>
+            </li>
+        </ul>
+            <nav class="top-navbar navbar-light">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0 bg-light text-black-50" type="submit">Search stores near you</button>
+                </form>
+            </nav>
+        </div>
 <!-- nav sign up link -->
-<div class="d-flex float-right">
-    <i class="fa fa-user" aria-hidden="true"></i>
-    <a class="nav-link active " href="#">Sign up</a>
-</div>
+        <div class="sign-up"><i class="fa fa-user" aria-hidden="true"></i>
+            <div class="d-flex float-right">
+                <a class="nav-link active " href="#">Sign up</a>
+            </div>
+        </div>
 <!-- jumbotron container -->
-<div class="jumbotron jumbotron-fluid">
-    <header class="main-header" role="banner">Welcome to Pizza World!</header>
-</div>
+    <div class="jumbotron jumbotron-fluid d-none d-lg-block">
+        <header class="main-header" role="banner">Welcome to Pizza World!</header>
+    </div>
 <!-- Build Your Own Header -->
-<h2 class="display-6">Build your own pizza!</h2>
+    <h2 class="display-6">Build your own pizza!</h2>
 <!-- nav-taps -->
-</div>
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-        <a class="nav-link active" id="home-tab" data-toggle="tab" href="Size and crust" role="tab" aria-controls="home"
-           aria-selected="true"><span class="badge badge-pill badge-secondary">1</span>Size and crust</a>
-    </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="Cheese and Sauce" role="tab"
-           aria-controls="profile"
-           aria-selected="false"><span class="badge badge-pill badge-secondary">2</span>Cheese and Suace</a>
-    </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link" id="contact-tab" data-toggle="tab" href="Toppings" role="tab" aria-controls="contact"
-           aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
-    </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"></div>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
-    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"></div>
-</div>
-
-<!-- Size and crust -->
-<div class="card">
-    <h4 class="main-header" role="banner">Choose size and crust</h4>
-    <!-- hand tossed radios -->
-    <div class="card-body">
-        <h5 class="main-header" role="banner">Hand Tossed</h5>
-        <h6 class="main-header" role="banner">Garlic seasoned crust with a rich, buttery taste.</h6>
-        <!-- radio 1 -->
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <div class="input-group-text">
-                    <input type="radio" aria-label="Radio button for following text input">
-                </div>
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button">
-            <!-- radio 2 -->
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="radio" aria-label="Radio button for following text input">
-                    </div>
-                </div>
-                <input type="text" class="form-control" aria-label="Text input with radio button">
-            </div>
-            <!-- crispy thin radios -->
+    <div>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="Size and crust" role="tab" aria-controls="home"
+                   aria-selected="true"><span class="badge badge-pill badge-secondary">1</span>Size and crust</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="Cheese and Sauce" role="tab"
+                   aria-controls="profile"
+                   aria-selected="false"><span class="badge badge-pill badge-secondary">2</span>Cheese and Suace</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="Toppings" role="tab" aria-controls="contact"
+                   aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
+            </li>
+        </ul>
+    </div>
+<!-- Size and crust main card-->
+    <div class="card">
+        <h4 class="main-header" role="banner">Choose size and crust</h4>
+<!-- hand tossed sub card 1-->
             <div class="card-body">
-                <h5 class="main-header" role="banner">Crispy Thin</h5>
-                <h6 class="main-header" role="banner">Thin enough for optimum crispy to crunchy ratio.</h6>
-                <!-- radio 1 -->
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <input type="radio" aria-label="Radio button for following text input">
-                        </div>
+                    <h5 class="main-header" role="banner">Hand Tossed</h5>
+                    <h6 class="main-header" role="banner">Garlic seasoned crust with a rich, buttery taste.</h6>
+                <div class="radio-box">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1"> Small (10")</label>
+                </div>
+                    <hr/>
+                <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2"> Medium (12")</label>
+                </div>
+            </div>
+        </div>
+<!-- crispy thin sub card 2 -->
+            <div class="card-body">
+                    <h5 class="main-header" role="banner">Crispy Thin</h5>
+                    <h6 class="main-header" role="banner">Thin enough for optimum crispy to crunchy ratio.</h6>
+                <div class="radio-box">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1"> Small (10")</label>
                     </div>
-                    <input type="text" class="form-control" aria-label="Text input with radio button">
-                    <!-- radio 2 -->
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <input type="radio" aria-label="Radio button for following text input">
+                        <hr/>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2"> Medium (12")</label>
+                </div>
+            </div>
+        </div>
+<!-- footer navbar -->
+        <nav class="navbar navbar-light">
+            <form class="form-inline">
+                <button class="btn btn-outline-success" type="button">Next Steps</button>
+            </form>
+        </nav>
+    </div>
+
+<!-- navbar container page 2-->
+    <div class="container d-inline-flex">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="Pizza world" role="tab"
+                   aria-controls="home" aria-selected="true">Pizza world</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="Order online" role="tab"
+                   aria-controls="profile" aria-selected="false">Order online</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="Menu" role="tab" aria-controls="contact"
+                   aria-selected="false">Menu</a>
+            </li>
+        </ul>
+        <nav class="top-navbar navbar-light">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 bg-light text-black-50" type="submit">Search stores near you</button>
+            </form>
+        </nav>
+    </div>
+<!-- nav sign up link -->
+    <div class="sign-up"><i class="fa fa-user" aria-hidden="true"></i>
+        <div class="d-flex float-right">
+            <a class="nav-link active " href="#">Sign up</a>
+        </div>
+    </div>
+<!-- jumbotron container -->
+    <div class="jumbotron jumbotron-fluid d-none d-lg-block">
+        <header class="main-header" role="banner">Welcome to Pizza World!</header>
+    </div>
+<!-- Build Your Own Header -->
+    <h2 class="display-6">Build your own pizza!</h2>
+<!-- nav-taps -->
+    <div>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="Size and crust" role="tab" aria-controls="home"
+                   aria-selected="true"><span class="badge badge-pill badge-secondary">1</span>Size and crust</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="Cheese and Sauce" role="tab"
+                   aria-controls="profile"
+                   aria-selected="false"><span class="badge badge-pill badge-secondary">2</span>Cheese and Suace</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="Toppings" role="tab" aria-controls="contact"
+                   aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
+            </li>
+        </ul>
+    </div>
+<!-- choose cheese and sauce main card-->
+    <div class="card">
+        <h4 class="main-header" role="banner">Choose Cheese and Sauce</h4>
+<!-- cheese sub card 1 -->
+        <div class="card-body">
+            <h5 class="main-header" role="banner">Cheese</h5>
+            <h6 class="main-header" role="banner">How Much?</h6>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Regular</option>
+                            <option>Light</option>
+                            <option>Normal</option>
+                            <option>Extra</option>
+                            <option>Double</option>
+                        </select>
+                </div>
+        </div>
+<!-- sauce sub card 2 -->
+        <div class="card-body">
+            <h5 class="main-header" role="banner">Suace</h5>
+            <h6 class="main-header" role="banner">What Type?</h6>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Robust Insired Tomato Sauce</option>
+                            <option>Tomato Sauce</option>
+                            <option>Marinara Sauce</option>
+                            <option>BBQ Sauce</option>
+                            <option>Alfredo Sauce</option>
+                        </select>
+                </div>
+        </div>
+<!-- footer navbar -->
+        <div>
+            <nav class="navbar navbar-light">
+                <form class="form-inline">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button  type="button" class="btn btn-secondary"><i class="fa fa-angle-left mr-2" aria-hidden="true"></i>Previous Step</button>
+                        <button type="button" class="btn btn-secondary">Next Step<i class="fa fa-angle-right ml-2" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+            </nav>
+        </div>
+    </div>
+
+<!-- navbar container page 3-->
+    <div class="container d-inline-flex">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="Pizza world" role="tab"
+                   aria-controls="home" aria-selected="true">Pizza world</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="Order online" role="tab"
+                   aria-controls="profile" aria-selected="false">Order online</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="Menu" role="tab" aria-controls="contact"
+                   aria-selected="false">Menu</a>
+            </li>
+        </ul>
+        <nav class="top-navbar navbar-light">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 bg-light text-black-50" type="submit">Search stores near you</button>
+            </form>
+        </nav>
+    </div>
+<!-- nav sign up link -->
+    <div class="sign-up"><i class="fa fa-user" aria-hidden="true"></i>
+        <div class="d-flex float-right">
+            <a class="nav-link active " href="#">Sign up</a>
+        </div>
+    </div>
+<!-- jumbotron container -->
+    <div class="jumbotron jumbotron-fluid d-none d-lg-block">
+        <header class="main-header" role="banner">Welcome to Pizza World!</header>
+    </div>
+<!-- Build Your Own Header -->
+    <h2 class="display-6">Build your own pizza!</h2>
+<!-- nav-taps -->
+    <div>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="Size and crust" role="tab" aria-controls="home"
+                   aria-selected="true"><span class="badge badge-pill badge-secondary">1</span>Size and crust</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="Cheese and Sauce" role="tab"
+                   aria-controls="profile"
+                   aria-selected="false"><span class="badge badge-pill badge-secondary">2</span>Cheese and Suace</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="Toppings" role="tab" aria-controls="contact"
+                   aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
+            </li>
+        </ul>
+    </div>
+<!-- choose toppings main card -->
+    <div class="card">
+        <h4 class="main-header" role="banner">Choose Toppings</h4>
+<!-- choose meats sub card 1 -->
+            <div class="card-body">
+                <h5 class="main-header" role="banner">Choose Meats</h5>
+                    <div class="radio-box">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1"> Beef</label>
                             </div>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Text input with radio button">
+                        <hr/>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2"> Ham</label>
+                            </div>
+                        <hr/>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2"> Philly Steak</label>
+                            </div>
+                        <hr/>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2"> Bacon</label>
+                            </div>
+                    </div>
+            </div>
+<!-- choose non meats sub card 2 -->
+            <div class="card-body">
+                <h5 class="main-header" role="banner">Choose Meats</h5>
+                    <div class="radio-box">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1"> Green Peppers</label>
+                            </div>
+                        <hr/>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2"> Mushrooms</label>
+                            </div>
+                        <hr/>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2"> Onions</label>
+                            </div>
+                        <hr/>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2"> Jalepeno Peppers</label>
+                            </div>
                     </div>
                 </div>
-                <!-- footer navbar -->
+<!-- footer navbar -->
                 <div>
-                    <nav class="navbar navbar-light bg-light">
+                    <nav class="navbar navbar-light">
                         <form class="form-inline">
-                            <button class="btn btn-outline-success" type="button">Next Steps</button>
+                            <button class="btn btn-outline-success" type="button">Checkout<i class="fa fa-shopping-cart ml-2" aria-hidden="true"></i></button>
+
                         </form>
                     </nav>
                 </div>
             </div>
 
-<!-- Choose Cheese and Sauce -->
-<div class="card">
-    <h4 class="main-header" role="banner">Choose Cheese and Sauce</h4>
-    <!-- hand tossed radios -->
-    <div class="card-body">
-        <h5 class="main-header" role="banner">Hand Tossed</h5>
-        <h6 class="main-header" role="banner">Garlic seasoned crust with a rich, buttery taste.</h6>
-        <!-- radio 1 -->
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <div class="input-group-text">
-                    <input type="radio" aria-label="Radio button for following text input">
-                </div>
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button">
-            <!-- radio 2 -->
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="radio" aria-label="Radio button for following text input">
-                    </div>
-                </div>
-                <input type="text" class="form-control" aria-label="Text input with radio button">
-            </div>
-            <!-- crispy thin radios -->
-            <div class="card-body">
-                <h5 class="main-header" role="banner">Crispy Thin</h5>
-                <h6 class="main-header" role="banner">Thin enough for optimum crispy to crunchy ratio.</h6>
-                <!-- radio 1 -->
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <input type="radio" aria-label="Radio button for following text input">
-                        </div>
-                    </div>
-                    <input type="text" class="form-control" aria-label="Text input with radio button">
-                    <!-- radio 2 -->
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <input type="radio" aria-label="Radio button for following text input">
-                            </div>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Text input with radio button">
-                    </div>
-                </div>
-                <!-- footer navbar -->
-                <div>
-                    <nav class="navbar navbar-light bg-light">
-                        <form class="form-inline">
-                            <button class="btn btn-outline-success" type="button">Next Steps</button>
-                        </form>
-                    </nav>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                    crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-                    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-                    crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-                    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-                    crossorigin="anonymous"></script>
-            <!-- Your custom JS goes here -->
+<!-- script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+<!-- Your custom JS goes here -->
+    <script $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            e.target // newly activated tab
+            e.relatedTarget // previous active tab
+            })</script
 
 </body>
 </html>

@@ -8,7 +8,13 @@ body {
     background-color: none;
 }
 
-/* jumbotron container */
+.fa {
+    margin-top: .60em;
+}
+
+.sign-up {
+    float: right;
+}
 
 .jumbotron {
     background-image: url("pizza.png");
@@ -21,66 +27,65 @@ body {
 header {
     display: flex;
     justify-content: center;
-    font-size: xx-large;
+    font-size: 3em;
     background-color: white;
     opacity: .75;
-
 }
 
 h2 {
     margin-left: 1em;
 }
 
-.nav-tabs {
-    margin-left: 2em;
+.badge {
+    margin: .5em;
 }
 
 h4 {
-    display: flex;
-    justify-content: left;
     background-color: dodgerblue;
     color: white;
     padding: 1em;
 }
 
-.card {
-    border: thin;
-    border: grey;
-    border-radius: .5em;
-}
-
 .card-body {
-    padding: 1em;
-    border: thin;
-    border: grey;
-    border-radius: .5em;
-}
-
-.main-header {
-    border-width: thin;
-    border-left-width: thin;
-    border-left-color: lightgray;
+    /*padding: 0;*/
+    /*margin: 0;*/
 }
 
 h5 {
-    display: flex;
-    justify-content: left;
     background-color: lightgray;
-    color: black;
+    margin: 0;
     padding: 1em;
-    border-radius: .5em;
+    border-radius: .5em.5em 0 0;
 }
 
 h6 {
-    display: flex;
-    justify-content: left;
-    color: black;
+    border: 2px solid lightgray;
+    border-bottom: 1px;
+    margin: 0;
     padding: 1em;
 }
 
-.navbar {
-    margin: 2em;
-    padding-top: 1em;
-    justify-content: right;
+.radio-box {
+    border: 2px solid lightgray;
+    margin: 0;
+    padding: 1em;
+    border-radius: 0 0 .5em .5em;
+}
 
+.form-group {
+    border: 2px solid lightgray;
+    margin: 0;
+    padding: 1em;
+    border-radius: 0 0 .5em .5em;
+}
+
+.navbar {
+    margin: 1em;
+    padding: 1em;
+    justify-content: right;
+    background-color: lightgray;
+}
+.btn {
+    background-color: dodgerblue;
+    color: white;
 }
