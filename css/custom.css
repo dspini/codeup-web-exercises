@@ -79,6 +79,12 @@ h6 {
     border-radius: 0 0 .5em .5em;
 }
 
+.form-check {
+    border: .25px solid lightgray;
+    margin: 0;
+    padding: .5em .5em .5em 2em;
+}
+
 .navbar {
     margin: 1em;
     padding: 1em;
