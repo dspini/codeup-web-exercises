@@ -8,11 +8,12 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-    function sayHello() {
-        let name ="Codeup!";
-        console.log("Hello " + name);
-    }
-    sayHello()
+
+const sayhello = function (name) {
+        return "Hello, " + name + "!";
+}
+console.log(sayhello("Codeup"));
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -20,23 +21,26 @@
  *
  * console.log 'helloMessage' to check your work
  */
-    let helloMessage = function() {
-        let myName = "Donnie";
-        console.log(myName)
-    }
-    helloMessage()
+
+let helloMessage = sayhello("Hyperion");
+console.log(helloMessage);
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-    let myName = function() {
-    }
-    myName()
+
+let myName = "hperion";
+helloMessage = sayhello(myName);
+console.log(helloMessage);
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
+
+console.log(random);
 
 /**
  * TODO:
@@ -55,11 +59,16 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-    function isTwo() {
-        let number = 2
-        console.log(number = true);
-    }
-    isTwo()
+
+const isTwo = function (num) {
+    return num === 2
+}
+// console.log(isTwo(1)); // returns false
+// console.log(isTwo(2)); // returns true
+// console.log(isTwo(3)); // returns false
+
+console.log(isTwo(random));
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -71,30 +80,26 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.37
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-    function calculateTip() {
-        let bill = 20.00;
-        let tip = 0.2;
-        let tipTotal = bill * tip;
-        console.log(tipTotal);
-    }
-    calculateTip()
+
+const calculateTip = function(tipPercentage, totalBill) {
+    return tipPercentage * totalBill;
+}
+console.log(calculateTip(tipPercentage 0.20, totalBill 20)); // returns 4
+console.log(calculateTip(tipPercentage 0.25, totalBill 25.50));// returns 6.37
+console.log(calculateTip(tipPercentage 0.15, totalBill 33.42));// returns 5.013
+
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-    function calculateTip() {
-        let userInput = prompt("Enter bill amount.");
-        console.log("You entered $" + userInput);
-        let bill = (userInput);
-        let tip = 0.2;
-        let tipTotal = bill * tip;
-        alert("you should tip this amount $" + tipTotal)
-        let totalBill = bill + tipTotal;
-        alert("Your total bill is $"+ totalBill);
-    }
-    calculateTip()
+
+let totalBill = parseFloat(prompt("Waht is your bill total?"));
+let tipPercentage = parseFloat(prompt("What percent would you like to tip?"));
+alert("Suggested tip amount: $" calculateTip(tipPercentage, totalBill));
+
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -109,14 +114,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-    function applyDiscount() {
-        let userInput = prompt("Enter original price");
-        console.log("You entered $" + userInput);
-        let price = (userInput);
-        let discount = 0.2;
-        let totalDiscount = price * discount;
-        alert("you discount is this amount $" + totalDiscount)
-        let totalPrice = price + discount;
-        alert("Your total bill is $"+ totalPrice);
-    }
-    applyDiscount()
+
+const applyDiscount = function(originalPrice, discountPercent) {
+  return originalPrice - originalPrice * discountPercent;
+}
+var originalPrice = 100;
+var dicountPercent = .2; // 20%
+console.log(applyDiscount(originalPrice, dicountPercent)); //80
+console.log(applyDiscount(originalPrice: 45.99, dicountPercent: 0.12));
