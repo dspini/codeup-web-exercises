@@ -37,8 +37,8 @@
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your function and console.log the results.
@@ -146,27 +146,35 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 //Generate a random number between 0 and 6
 
-var luckyNumber = Math.floor(Math.random() * 6);
-let userInput = prompt("What is your total bill?");
-alert("You have entered: $" + userInput)
-alert("Your lucky number is " + luckyNumber)
-let luckyNumber = calculateTotal;
-if (calculateTotal === "0") {
-    alert("Sorry, no discount.")
-} else if (calculateTotal === "1") {
-    alert("Great, you get 10% discount!")
-} else if (calculateTotal === "2") {
-    alert("Wow, you get 25% discount!")
-} else if (calculateTotal === "3") {
-    alert("Awesome, you get 35% discount!")
-} else if (calculateTotal === "4") {
-    alert("Amazing, you get 50% discount!")
-} else if (calculateTotal === "5") {
-    alert("You are a big winner, 100% discount!!!")
-} else if (calculateTotal === "6") {
-    alert("Sorry, no discount.")
-}
-console.log(calculateTotal)
+// var luckyNumber = Math.floor(Math.random() * 6);
+// let userInput = prompt("What is your total bill?");
+// alert("You have entered: $" + userInput)
+// alert("Your lucky number is " + luckyNumber)
+// if (luckyNumber == 0) {
+//     var discountPercent = userInput * 0.00;
+//     alert("Sorry, no discount.")
+// } else if (luckyNumber == 1) {
+//     var discountPercent = userInput * 0.10;
+//     alert("Great, you get 10% discount!")
+// } else if (luckyNumber == 2) {
+//     var discountPercent = userInput * 0.25;
+//     alert("Wow, you get 25% discount!")
+// } else if (luckyNumber == 3) {
+//     var discountPercent = userInput * 0.35;
+//     alert("Awesome, you get 35% discount!")
+// } else if (luckyNumber == 4) {
+//     var discountPercent = userInput * 0.50;
+//     alert("Amazing, you get 50% discount!")
+// } else if (luckyNumber == 5)  {
+//     var discountPercent = userInput * 1.00;
+//     alert("You are a big winner, 100% discount!!!")
+// } else if (luckyNumber == 6) {
+//     var discountPercent = userInput * 0.00;
+//     alert("Sorry, no discount.")
+// }
+// alert("Your bill was $" + userInput + " before you discount.");
+// alert("Your bill is now $" + (userInput - discountPercent));
+// console.log(userInput - discountPercent)
 
 /**
  * TODO:
@@ -184,3 +192,31 @@ console.log(calculateTotal)
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+// var confirmed = confirm("Would you like to enter a number?");
+// console.log(confirmed);
+// if (confirmed === true) {
+//     alert("Great, lets keep playing.");
+// } else if (confirmed === false) {
+//     alert ("Thanks for Visiting")(exit.html);
+// }
+// var userInput = prompt("Please enter your number.");
+//     alert("You entered the number " + userInput);
+// console.log(userInput);
+// if(userInput % 2 == 0) {
+//     alert ("Your number is an even number.");
+// } else {
+//     alert("Your number is an odd number.");
+// }
+// let total = parseInt(userInput) + 100;
+//     alert("Your number plus 100 is equal to " + total);
+// if (userInput >0) {
+//     alert ("your number is a positive number.")
+// } else if (userInput <0){
+//     alert ("your number is a negative number.")
+// } else if (userInput == 0) {
+//     alert ("your number is not positive or negative.")
+// }
+// alert ("Thank you for playing!")
+
+
