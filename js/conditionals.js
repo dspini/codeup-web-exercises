@@ -20,7 +20,8 @@
  * console.logging the function's return value
  */
 
-// // let analyzeColor = "red";
+
+// let analyzeColor = "red";
 // if (analyzeColor === "blue") {
 //     alert("blue is the color of the sky")
 // } else if (analyzeColor === "red") {
@@ -62,7 +63,7 @@
  * Refactor your above function to use a switch-case statement
  */
 
-// let color = "blue";
+// let color = randomColor;
 // switch (color) {
 //     case "blue":
 //         alert("blue is the color of the sky")
