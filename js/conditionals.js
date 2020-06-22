@@ -188,8 +188,7 @@
  *
  * if what the user enters is not a number, use an alert to tell them that, and
  * do *not* display any of the above information.
- *
- * Can you refactor your code to use functions?
+ *git
  * HINT: The way we prompt for a value could be improved
  */
 
