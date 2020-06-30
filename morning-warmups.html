@@ -137,40 +137,53 @@
 
         //15. Write a JS function called magic8Ball that takes in one number as a parameter. The return value should be one of the following strings that corelates to the number passed through it.
 
-        var magic8Ball = Math.floor((Math.random() * 8) + 1);
-        if (magic8Ball == 1) {
-            alert("As I see it, yes.")
-        } else if (magic8Ball == 2) {
-            alert("Ask again later.")
-        } else if (magic8Ball == 3) {
-            alert("Better not tell you now.")
-        } else if (magic8Ball == 4) {
-            alert("Cannot predict now.")
-        } else if (magic8Ball == 5) {
-            alert("Concentrate and ask again.")
-        } else if (magic8Ball == 6)  {
-            alert("Don't counton it.")
-        } else if (magic8Ball == 7) {
-            alert("Outlook not so good.")
-        } else if (magic8Ball == 8) {
-            alert("outlook is good.")
-        }
+        // var magic8Ball = Math.floor((Math.random() * 8) + 1);
+        // if (magic8Ball == 1) {
+        //     alert("As I see it, yes.")
+        // } else if (magic8Ball == 2) {
+        //     alert("Ask again later.")
+        // } else if (magic8Ball == 3) {
+        //     alert("Better not tell you now.")
+        // } else if (magic8Ball == 4) {
+        //     alert("Cannot predict now.")
+        // } else if (magic8Ball == 5) {
+        //     alert("Concentrate and ask again.")
+        // } else if (magic8Ball == 6)  {
+        //     alert("Don't counton it.")
+        // } else if (magic8Ball == 7) {
+        //     alert("Outlook not so good.")
+        // } else if (magic8Ball == 8) {
+        //     alert("outlook is good.")
+        // }
         // console.log(magic8Ball)
 
         //16. Light switch on / off exercise
 
-        let lights = "on";
-        let lightSwitch = funtion() {
-            if (lights === "on") {
-                lights = "off";
-            } else {
-                lights = "on";
-            }
-        }
+        // let lights = "on";
+        // let lightSwitch = funtion() {
+        //     if (lights === "on") {
+        //         lights = "off";
+        //     } else {
+        //         lights = "on";
+        //     }
+        // }
 
         // console.log("lighrs are " + lights);
         // lightSwitch();
         // Console/log("light are now " + lights);
+
+        //17.  Write a JS function that will loop through the numbers 1-10 and output whether each is even or odd. Ie:
+
+        function isOddOrEven() {
+            for (let i = 1; i <= 10; i++) {
+                if (i % 2 !== 0) {
+                    console.log(i + " is an odd number.");
+                } else {
+                    console.log(i + " is an even number.");
+                }
+            }
+        }
+        isOddOrEven();
 
     </script>
 </body>
