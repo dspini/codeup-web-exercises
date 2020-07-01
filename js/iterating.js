@@ -6,7 +6,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-    var names = ["Tom", "Bob", "John", "Fred"];
+    let names = ["John", "Paul", "George", "Ringo"];
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
@@ -28,7 +28,7 @@
      * array.
      */
     for (var i = 0; i < names.length; i++) {
-        console.log('The name at index ' + i + ' is: ' + names[i]);
+        console.log('The name at index ' + i + ' is: ' + names[i] + '.');
     }
     /**
      * TODO:
@@ -45,14 +45,25 @@
      * - first: returns the first item in the array
      * - second: returns the second item in the array
      * - last: returns the last item in the array
-     *
+     *4
      * Example:
      *  > first([1, 2, 3, 4, 5]) // returns 1
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-    console.log('The first name is: ' + names[0]);
-    console.log('The second name is: ' + names[1]);
-    console.log('The third name is: ' + names[3]);
+
+    let first = [1, 2, 3, 4, 5];
+    let firstArray = function() {
+        return first [0];
+    }
+    let secondArray = function() {
+        return first [1];
+    }
+    let lastArray = function() {
+        return first [4];
+    }
+    console.log(firstArray());
+    console.log(secondArray());
+    console.log(lastArray());
 
 })();
