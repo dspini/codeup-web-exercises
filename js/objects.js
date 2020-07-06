@@ -11,13 +11,16 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-
     var person = {
-        firstName: "Rick",
-        lastName: "Sanchez"
-    };
-    console.log(person.firstName);
-    console.log(person.lastName);
+        firstName: "Donnie",
+        lastName: "Spini",
+        sayHello: function(){
+            return "Hello from " + this.firstName + " " + this.lastName;
+        }
+    }
+    console.log(person.firstName) // "Daniel"
+    console.log(person.lastName) // "Fryar"
+
 
     /**
      * TODO:
@@ -29,10 +32,7 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    person.sayhello = function() {
-        console.log("Hello from " + person.firstName + " " + person.lastName + "!");
-    };
-    person.sayhello()
+    console.log(person.sayHello()); // "Hello from Daniel Fryar!"
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -53,12 +53,15 @@
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-    shoppers.forEach(function (el, idx) {
-        let discounted = (el.amount > 200) ? el.amount * 0.88 : el.amount;
-        console.log(`${el.name} | ${el.amount} | ${discounted}`);
-    });
 
-
+    shoppers.forEach(function(shopper){
+        let saved= 0;
+        if (shopper.amount > 200) {
+            saved = shopper.amount * .12;
+        }
+        console.log(shopper.name + " spent " + shopper.amount + ". They saved " +
+            saved + " for a total of " + (shopper.amount - saved));
+    })
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -72,47 +75,46 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-
-    var books = [
+    let books = [
         {
-            bookNumber: "Book #1",
-            title: "The Salmon of Doubt",
+            title: "Fahrenheit 451",
             author: {
-                firstName:"Douglas",
-                lastName:"Adams"}
+                firstName: "Ray",
+                lastName: "Bradbury"
+            }
         },
         {
-            bookNumber: "Book #2",
-            title: "1984",
+            title: "Hyperion",
             author: {
-                firstName:"George",
-                lastName:"Orwell"}
+                firstName: "Dan",
+                lastName: "Simmons"
+            }
         },
         {
-            bookNumber: "Book #3",
-            title: "Invisable Man",
+            title: "The Cat in the Hat",
             author: {
-                firstName:"Ralph",
-                lastName:"Ellison"}
+                firstName: "Dr.",
+                lastName: "Seuss"
+            }
         },
         {
-            bookNumber: "Book #4",
-            title: "Moby-Dick",
+            title: "The Raven",
             author: {
-                firstName:"Herman",
-                lastName:"Melville"}
+                firstName: "Edgar Allen",
+                lastName: "Poe"
+            }
         },
         {
-            bookNumber: "Book #5",
-            title: "Ulysses",
+            title: "Eloquent JavaScript",
             author: {
-                firstName:"James",
-                lastName:"Joyce"}
+                firstName: "Marijn",
+                lastName: "Haverbeke"
+            }
         }
     ];
-
-
-
+    // console.log(books[0].title);
+    // console.log(books[0].author.firstName);
+    // console.log(books[0].author.lastName);
 
     /**
      * TODO:
@@ -138,13 +140,12 @@
      *      ---
      *      ...
      */
-
-    let bookList = function(n) {
-        for (let n = 0; n < books.length; n++) {
-            console.log(books[n].bookNumber + " Title: " + books[n].title + " - by: " + books[n].author.firstName + " " + books[n].author.lastName);
-        }
-    }
-    bookList();
+    books.forEach(function(book,index){
+        console.log("Book # " + (index+1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log("---");
+    });
 
     /**
      * Bonus:
@@ -157,15 +158,24 @@
      *   `showBookInfo` function.
      */
 
-    let createBook = function(n) {
-        let Book6 = {
-            bookNumber: "Book #6",
-            title: "The Hobbit",
-            author: {
-                firstName: "J.R.R",
-                lastName: "Tolkin"
-            }
-        }
+    const createBook = function (title, firstName, lastName) {
+        let book = {};
+        book.title = title;
+        book.author = {};
+        book.author.firstName = firstName;
+        book.author.lastName = lastName;
+        return book;
+        // return {title,author:{firstName,lastName}}
     }
-    console.log(createBook);
+    const showBookInfo = function(book,index){
+        console.log("Book # " + (index+1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log("---");
+    }
+
+    let books2 = [];
+    books2.push(createBook("Salmon of Doubt","Douglas","Adams"));
+
+    books2.forEach(showBookInfo);
 })();
