@@ -45,24 +45,24 @@
         bodyElement.style.color = "red";
 
         // TODO: Uncomment the next line and get all list items
-        const listItems = document.getElementsByTagName('li');
-        for (var i = 0; i < listItems.length; i++) {
-            console.log(listItems[i]);
+        const listItemsOne = document.getElementsByTagName('li');
+        for (var i = 0; i < listItemsOne.length; i++) {
+            console.log(listItemsOne[i]);
         }
 
         // // TODO: Set text color on every other list item to grey
-        // const listItems = document.getElementsByClassName("li")[1,3];
-        // listItems.style.color = "red";
+        const listItemsTwo = document.getElementsByTagName("li")[1,3];
+        listItemsTwo.style.color = "red";
 
         // TODO: Set text color of li with dbid = 1 to blue
-        var listItems = document.getElementsByTagName('li');
-        for (var i = 0; i < listItems.length; i++) {
-            var dbId = listItems[i].getAttribute("data-dbid");
+        const listItemsThree = document.getElementsByTagName('li');
+        for (var i = 0; i < listItemsThree.length; i++) {
+            var dbId = listItemsThree[i].getAttribute("data-dbid");
             console.log(dbId);
         }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName("p");;
+        const subParagraphs = document.getElementsByClassName("p");;
         for (var i = 0; i < subParagraphs .length; i++) {
             console.log(subParagraphs [i]);
         }
