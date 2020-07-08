@@ -51,25 +51,30 @@
         }
 
         // // TODO: Set text color on every other list item to grey
-        const listItemsTwo = document.getElementsByTagName("li")[1,3];
-        listItemsTwo.style.color = "red";
+        const listItemsTwo = document.getElementsByTagName("li");
+        for (var i = 0; i < listItemsTwo.length; i++) {
+            if (i % 2 === 0) {
+               listItemsTwo[i].style.color = "grey";
+            }
+        }
 
         // TODO: Set text color of li with dbid = 1 to blue
-        const listItemsThree = document.getElementsByTagName('li');
+        const listItemsThree = document.getElementsByTagName("li");
         for (var i = 0; i < listItemsThree.length; i++) {
-            var dbId = listItemsThree[i].getAttribute("data-dbid");
-            console.log(dbId);
+            if (i % 2 !== 0) {
+                listItemsThree[i].style.color = "blue";
+            }
         }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         const subParagraphs = document.getElementsByClassName("p");;
         for (var i = 0; i < subParagraphs .length; i++) {
-            console.log(subParagraphs [i]);
-        }
+
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraphs.innerHTML = "Mission Accomplished!";
         console.log(subParagraphs.innerHTML);
+        }
 
 
     })();
