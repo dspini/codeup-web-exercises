@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>First Mapbox Map</title>
+        <!-- Mapbox CSS -->
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+        <!-- Custom CSS -->
+            <style>
+                #map {
+                    /* the width and height may be set to any size */
+                    width: 100%;
+                    height: 700px;
+                }
+            </style>
+    </head>
+    <body>
+
+        <h1>"Great Northwest Side San Antonio Restaurants"</h1>
+
+    <!-- The HTML element that serves as the Mapbox container -->
+            <div id='map'></div>
+
+    <!-- Mapbox JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+    <script src="js/keys.js"></script>
+    <script src="js/mapbox-geocoder-utils.js"></script>
+    <!-- Custom JS -->
+    <script>
+        mapboxgl.accessToken = mapboxKey;
+        let map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v9',
+            zoom: 15,
+            center: [-98.6670688, 29.5535695]
+        });
+
+        geocode("11719 Bandera Rd, San Antonio, TX 78250", mapboxKey).then(function(data) {
+            console.log(data);
+            new mapboxgl.Marker().setLngLat(data).addTo(map);
+            var Popup = new mapboxgl.Popup()
+                .setHTML("<h3>Aspen Creek Inn</h3>")
+        });
+
+
+
+
+        geocode("11812 Bandera Rd, Helotes, TX 78023", mapboxKey).then(function(data) {
+            console.log(data);
+            new mapboxgl.Marker().setLngLat(data).addTo(map);
+        });
+
+        geocode("11851 Bandera Rd #101, Helotes, TX 78023", mapboxKey).then(function(data) {
+            console.log(data);
+            new mapboxgl.Marker().setLngLat(data).addTo(map);
+        });
+
+    </script>
+    </body>
+</html>
