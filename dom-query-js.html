@@ -1,83 +1,122 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>DOM: Query and Modify</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM: Query and Modify</title>
+    </head>
+    <body>
 
-<h1 id="main-header">Hello World!</h1>
-<ul>
-    <li data-dbid="1">Item 1</li>
-    <li data-dbid="2">Item 2</li>
-    <li data-dbid="3">Item 3</li>
-    <li data-dbid="4">Item 4</li>
-    <li data-dbid="5">Item 5</li>
-</ul>
-<h2 id="sub-header">Hello Again.</h2>
-<p class="sub-paragraph">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat. Duis aute irure dolor in
-    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.
-</p>
+        <h1 id="main-header">Hello World!</h1>
+            <ul>
+                <li data-dbid="1">Item 1</li>
+                <li data-dbid="2">Item 2</li>
+                <li data-dbid="3">Item 3</li>
+                <li data-dbid="4">Item 4</li>
+                <li data-dbid="5">Item 5</li>
+            </ul>
+        <h2 id="sub-header">Hello Again.</h2>
+            <p class="sub-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        <h2 id="Buttons">Buttons!</h2>
+            <button id="btn1">Button 1</button>
+            <button id="btn2">Button 2</button>
+            <button id="btn3">Button 3</button>
+            <button id="btn4">Button 4</button>
+        <script>
+            (function() {
+                "use strict";
+                // TODO: Button 1
 
-<script>
-    (function() {
-        "use strict";
+                // document.getElementById('btn1').addEventListener('click', funtion()); {
+                //
+                // });
+
+                const btn1 = function () {
+                    mainHeader.innerHTML = "JavaScript is Cool";
+                };
+                    document.getElementById('btn1').addEventListener('click', btn1);
+
+        // TODO: Button 2
+
+                const btn2 = function () {
+                    subHeader.style.color = "blue";
+                };
+                    document.getElementById('btn2').addEventListener('click', btn2);
+
+        // TODO: Button 3
+
+                const btn3 = function () {
+                    for (var i = 0; i < listItems.length; i++) {
+                        if ((i + 1) % 2 == 0) {
+                            listItems[i].style.color = "red";
+                        }
+                        if (listItems[i].getAttribute("data-dbid")) {
+                            if (listItems[i].getAttribute("data-dbid") === "1") {
+                                listItems[i].style.color = "blue";
+                            }
+                        }
+                    }
+                };
+                    document.getElementById('btn3').addEventListener('click', btn3);
+
+        // TODO: Button 4
+
+                const btn4 = function () {
+                    subParagraphs[0].innerHTML = "Mission Accomplished!";
+                };
+                    document.getElementById('btn4').addEventListener('click', btn4);
+
         // TODO: Uncomment next line and get the main header element by id
-        const mainHeader = document.getElementById("main-header");
-        console.log(mainHeader);
+
+                const mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
-        console.log(mainHeader.innerHTML);
+
+                // mainHeader.innerHTML = "JavaScript is Cool!";
 
         // TODO: Uncomment the next line and get the sub header element by id
-        const subHeader = document.getElementById("sub-header");
-        console.log(subHeader);
+
+                const subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        const bodyElement = document.getElementById("sub-header");
-        bodyElement.style.color = "red";
+
+                // subHeader.style.color = "blue";
 
         // TODO: Uncomment the next line and get all list items
-        const listItemsOne = document.getElementsByTagName('li');
-        for (var i = 0; i < listItemsOne.length; i++) {
-            console.log(listItemsOne[i]);
-        }
 
-        // // TODO: Set text color on every other list item to grey
-        const listItemsTwo = document.getElementsByTagName("li");
-        for (var i = 0; i < listItemsTwo.length; i++) {
-            if (i % 2 === 0) {
-               listItemsTwo[i].style.color = "grey";
-            }
-        }
+                const listItems = document.getElementsByTagName('li');
 
+        // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
-        const listItemsThree = document.getElementsByTagName("li");
-        for (var i = 0; i < listItemsThree.length; i++) {
-            if (i % 2 !== 0) {
-                listItemsThree[i].style.color = "blue";
-            }
-        }
+
+                // for (var i = 0; i < listItems.length; i++) {
+                //     if ((i + 1) % 2 == 0) {
+                //         listItems[i].style.color = "grey";
+                //     }
+                //     if (listItems[i].getAttribute("data-dbid")) {
+                //         if (listItems[i].getAttribute("data-dbid") === "1") {
+                //             listItems[i].style.color = "blue";
+                //         }
+                //     }
+                // }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        const subParagraphs = document.getElementsByClassName("p");;
-        for (var i = 0; i < subParagraphs .length; i++) {
 
+                const subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs.innerHTML = "Mission Accomplished!";
-        console.log(subParagraphs.innerHTML);
-        }
 
+                // subParagraphs[0].innerHTML = "Mission Accomplished!";
 
-    })();
-</script>
-</body>
+            })();
+
+        </script>
+    </body>
 </html>
