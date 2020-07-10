@@ -7,54 +7,136 @@
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
         <!-- Custom CSS -->
             <style>
+                body {
+                    background-color: lightgrey;
+                }
                 #map {
                     /* the width and height may be set to any size */
                     width: 100%;
                     height: 700px;
                 }
+                button {
+                    background-color: palegreen;
+                }
+                #btn4 {
+                    float: right;
+                }
+                h1 {
+                    text-align: center;
+                    color: mediumblue;
+                    text-decoration: underline;
+                }
+                h3 {
+                    text-indent: 42px;
+                }
             </style>
     </head>
     <body>
 
-        <h1>"Great Northwest Side San Antonio Restaurants"</h1>
+            <h1>"Great Northwest Side San Antonio Restaurants"</h1>
 
-    <!-- The HTML element that serves as the Mapbox container -->
-            <div id='map'></div>
+            <h3>"Navigation Zoom"</h3>
+                <button id="btn1">Zoom In</button>
+                <button id="btn2">Zoom to Default</button>
+                <button id="btn3">Zoom Out</button>
+                <button id="btn4">Remove Markers</button>
 
-    <!-- Mapbox JS -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
-    <script src="js/keys.js"></script>
-    <script src="js/mapbox-geocoder-utils.js"></script>
-    <!-- Custom JS -->
-    <script>
-        mapboxgl.accessToken = mapboxKey;
-        let map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v9',
-            zoom: 15,
-            center: [-98.6670688, 29.5535695]
-        });
+        <!-- The HTML element that serves as the Mapbox container -->
+                <div id='map'></div>
 
-        geocode("11719 Bandera Rd, San Antonio, TX 78250", mapboxKey).then(function(data) {
-            console.log(data);
-            new mapboxgl.Marker().setLngLat(data).addTo(map);
-            var Popup = new mapboxgl.Popup()
-                .setHTML("<h3>Aspen Creek Inn</h3>")
-        });
+        <!-- Mapbox JS -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+        <script src="js/keys.js"></script>
+        <script src="js/mapbox-geocoder-utils.js"></script>
+        <!-- Custom JS -->
+        <script>
+            var accessToken = mapboxKey;
+            mapboxgl.accessToken = accessToken;
 
+            mapboxgl.accessToken = mapboxKey;
+            let map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v9',
+                zoom: 12,
+                center: [-98.6670688, 29.5535695]
+            });
 
+            // Navigation Buttons
+            const btn1 = function () {
+                map.setZoom(16);
+            };
+            document.getElementById("btn1").addEventListener("click", btn1);
 
+            const btn2 = function () {
+                map.setZoom(12);
+            };
+            document.getElementById("btn2").addEventListener("click", btn2);
 
-        geocode("11812 Bandera Rd, Helotes, TX 78023", mapboxKey).then(function(data) {
-            console.log(data);
-            new mapboxgl.Marker().setLngLat(data).addTo(map);
-        });
+            const btn3 = function () {
+                map.setZoom(9);
+            };
+            document.getElementById("btn3").addEventListener("click", btn3);
 
-        geocode("11851 Bandera Rd #101, Helotes, TX 78023", mapboxKey).then(function(data) {
-            console.log(data);
-            new mapboxgl.Marker().setLngLat(data).addTo(map);
-        });
+            // Remove Markers Button
 
-    </script>
+            const btn4 = function () {
+                var marker = new mapboxgl.Marker();
+                marker.remove();
+            };
+            document.getElementById("btn4").addEventListener("click", btn4);
+
+            // Marker #1
+            let aspenCreek = {
+                address: "11719 Bandera Rd, San Antonio, TX 78250",
+                popupHTML: "<p>Aspen Creek Grill<br><a href=\"http://aspencreekgrill.com\">Go to Aspen Creek</a><br>11719 Bandera Rd, San Antonio, TX 78250</p>"
+            };
+            function placeMarkerAndPopup1(info, token, map) {
+                geocode("11719 Bandera Rd, San Antonio, TX 78250", mapboxKey).then(function (data) {
+                    let popup = new mapboxgl.Popup()
+                        .setHTML(info.popupHTML);
+                    let marker = new mapboxgl.Marker()
+                        .setLngLat(data)
+                        .addTo(map)
+                        .setPopup(popup);
+                });
+            }
+            placeMarkerAndPopup1(aspenCreek, mapboxKey, map);
+
+            // Marker #2
+            let saltgrass = {
+                address: "11812 Bandera Rd, Helotes, TX 78023",
+                popupHTML: "<p>Saltgrass Steak House<br><a href=\"http://www.saltgrass.com\">Go to Saltgrass</a><br>11812 Bandera Rd, Helotes, TX 78023</p>"
+            };
+            function placeMarkerAndPopup2(info, token, map) {
+            geocode("11812 Bandera Rd, Helotes, TX 78023", mapboxKey).then(function(data) {
+                let popup = new mapboxgl.Popup()
+                    .setHTML(info.popupHTML);
+                let marker = new mapboxgl.Marker()
+                    .setLngLat(data)
+                    .addTo(map)
+                    .setPopup(popup);
+            });
+            }
+            placeMarkerAndPopup2(saltgrass, mapboxKey, map);
+
+            // Marker #3
+            let osaka = {
+                address: "11851 Bandera Rd #101, Helotes, TX 78023",
+                popupHTML: "<p>Osaka Japanese Steak & Sushi<br><a href=\"http://www.osaka-cuisine.com/\">Go to Osaka</a><br>11851 Bandera Rd #101, Helotes, TX 78023</p>"
+            };
+            function placeMarkerAndPopup3(info, token, map) {
+            geocode("11851 Bandera Rd #101, Helotes, TX 78023", mapboxKey).then(function(data) {
+                new mapboxgl.Marker().setLngLat(data).addTo(map);
+                let popup = new mapboxgl.Popup()
+                    .setHTML(info.popupHTML);
+                let marker = new mapboxgl.Marker()
+                    .setLngLat(data)
+                    .addTo(map)
+                    .setPopup(popup);
+            });
+            }
+            placeMarkerAndPopup3(osaka, mapboxKey, map);
+
+        </script>
     </body>
 </html>
