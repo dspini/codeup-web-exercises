@@ -219,44 +219,53 @@
 
         //20. FizzBuzz
 
-        console.log("fizzbuz1");
-        let fizzbuzz1 = function (num) {
-            for (let i = 1; i <= num; i++) {
-                if (i % 3 === 0 && i % 5 === 0) {
-                    console.log("fizzbuzz");
-                } else if (i % 3 === 0) {
-                    console.log("fizz");
-                } else if (i % 5 === 0) {
-                    console.log("buzz");
-                } else {
-                    console.log(i);
-                }
+        // console.log("fizzbuz1");
+        // let fizzbuzz1 = function (num) {
+        //     for (let i = 1; i <= num; i++) {
+        //         if (i % 3 === 0 && i % 5 === 0) {
+        //             console.log("fizzbuzz");
+        //         } else if (i % 3 === 0) {
+        //             console.log("fizz");
+        //         } else if (i % 5 === 0) {
+        //             console.log("buzz");
+        //         } else {
+        //             console.log(i);
+        //         }
+        //     }
+        // }
+        // fizzbuzz1( 31);
+        //
+        // //21. FizzBuzz
+        //
+        // console.log("fizzbuz2");
+        // let fizzbuzz2 = function (num) {
+        //     for (let i = 1; i <= num; i++) {
+        //         if (i % 3 === 0 && i % 5 === 0) {
+        //             console.log("fizzbuzz");
+        //         } else if (i % 3 === 0) {
+        //             console.log("fizz");
+        //         } else if (i % 5 === 0) {
+        //             console.log("buzz");
+        //         } else {
+        //             console.log(i);
+        //         }
+        //     }
+        // }
+        // fizzbuzz2( 31);
+
+        //22. Fibonacci
+
+        var fibonacci_series = function (n) {
+                if (n === 1) {
+                return [0, 1];
+            } else {
+                var s = fibonacci_series(n - 1);
+                s.push(s[s.length - 1] + s[s.length - 2]);
+                return s;
             }
-        }
-        fizzbuzz1( 31);
+        };
 
-        //21. FizzBuzz
-
-        console.log("fizzbuz2");
-        let fizzbuzz2 = function (num) {
-            for (let i = 1; i <= num; i++) {
-                if (i % 3 === 0 && i % 5 === 0) {
-                    console.log("fizzbuzz");
-                } else if (i % 3 === 0) {
-                    console.log("fizz");
-                } else if (i % 5 === 0) {
-                    console.log("buzz");
-                } else {
-                    console.log(i);
-                }
-            }
-        }
-        fizzbuzz2( 31);
-
-        //22.
-
-
-
+        console.log(fibonacci_series(20));
 
     </script>
 </body>
