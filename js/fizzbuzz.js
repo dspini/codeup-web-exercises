@@ -161,7 +161,7 @@
 
     console.log("fizzbuzz11");
     let fizzbuzz11 = function(num) {
-        for (let i = 1; I <= num; i++) {
+        for (let i = 1; i <= num; i++) {
             if (i % 5 === 0 && i % 3 === 0) {
                 console.log("fizzbuzz");
             } else if (i % 3 === 0) {
@@ -173,7 +173,43 @@
             }
         }
     }
+    fizzbuzz11(31);
 
+    console.log("fizzbuzz12");
+    const fizzbuzz12 = function(num) {
+        for (var i = 1; i <= num; i++) {
+            if (i % 5 === 0 && i % 3 === 0) {
+                console.log("fizzbuzz");
+            } else if (i % 3 === 0) {
+                console.log("fizz");
+            } else if (i % 5 === 0) {
+                console.log("buzz");
+            } else {
+                console.log(i);
+            }
+        }
+    }
+    fizzbuzz12(31);
 
+    console.log("fizzbuzz13");
+    function fizzbuzz13(num) {
+        for (var i = 1; i <= num; i++) {
+            switch (true) {
+                case i % 3 === 0 && i % 5 === 0:
+                    console.log("fizzbuzz");
+                    break;
+                case i % 3 === 0:
+                    console.log("fizz");
+                    break;
+                case i % 5 === 0:
+                    console.log("buzz");
+                    break;
+                default:
+                    console.log(i);
+                    break;
+            }
+        }
+    }
+    fizzbuzz13(31);
 
 })();
