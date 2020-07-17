@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery</title>
+    </head>
+    <body>
+        <div class="main_container">
+            <h1 class="h1">Example Page</h1>
+                <div class="container1">
+                <h3 class="h3">NOTICE</h3>
+                     <p class="p">This is an important message!</p>
+                </div>
+            <hr>
+                <div class="container2">
+                <h2 class="h2">Lorem Ipsum</h2>
+                    <p class="p">
+                        Lorem ipsum dolor sit amet, incididunt ut, labore et dolore magna aliqua, quis ut aliquip ex ea commodo.
+                    </p>
+                </div>
+
+                <div class="container3">
+                <h2 class="h2">Lists</h2>
+                    <ul class="ul">
+                    <h4 class="h4">List 1</h4>
+                        <li class="li" id="item1">Item 1</li>
+                        <li class="li" id="item2">Item 2</li>
+                    </ul>
+                <hr>
+                    <ol class="ol">
+                    <h4 class="h4">List 2</h4>
+                        <li class="li" id="item3">Item 1</li>
+                        <li class="li" id="item4">Irem 2</li>
+                    </ol>
+                </div>
+                <div>
+                    <button class="button">Button</button>
+                </div>
+        <script src="js/jquery-2.2.4.js"></script>
+        <script>
+
+            $(document).ready(function() {
+                console.log("ready");
+
+                $(".main_container").css("background-color", "grey").css("margin", "3em").css("padding", "1em");
+                $(".h1").css("color", "blue").css("font-style", "italic").css("text-decoration", "underline");
+                ;
+                $(".h2").css("color", "blue");
+                $(".h3").css("color", "blue");
+                $(".h4").css("color", "red").css("font-size", "30px");
+                $(".p").css("color", "green");
+                $(".ul").css("background-color", "pink").css("font-size", "20px").css("border", "5px solid black");
+                $(".ol").css("background-color", "pink").css("font-size", "20px").css("border", "5px solid black");
+                $(".li").css("color", "green");
+                $("#item1").css("color", "black");
+                $(".container1").css("background-color", "pink");
+                $(".container2").css("background-color", "pink");
+                $(".container3").css("background-color", "pink");
+                $(".button").css("background-color", "orange");
+            });
+        </script>
+    </body>
+</html>
