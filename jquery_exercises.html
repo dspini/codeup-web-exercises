@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <meta charset="UTF-8">
         <title>Title</title>
     </head>
     <body>
-        <h1>We are learning jQuery in 2020!</h1>
-        <p>class="lorem">
-        </p>
-            <script src="js/jquery-2.2.4.js"></script>
-            <script>
-                $(document).ready(function() {
-                    alert("Ready to Go!")
-                })
-            </script>
+        <h1>Example Page</h1>
+            <div class="important">
+                <h3>NOTICE</h3>
+                    <p>This is an important message!</p>
+            </div>
+            <div class="not-important">
+                <h2>Lorem Ipsum</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.
+                    </p>
+            </div>
+                    <p class="important">This is also very important.</p>
+
+        <script src="js/jquery-2.2.4.js"></script>
+        <script>
+            $(document).ready(function() {
+                alert("Ready to Go!")
+            })
+        </script>
+
     </body>
 </html>
