@@ -3,18 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
-
             <style>
                 body {background-color: ivory}
                 .visibility {color: black}
                 .invisible {color: red}
                 .hidden {color: green}
+                img {width: 25%; height: 10%; padding: .5em; inline-block}
+                container{width: 100%; font-size: 12px; overflow: hidden; background: #ccc;}
+                frame1 {float: left; width: 33%; background-color: #bbb;}
+                frame2 {float: left; background-color: #eee; width: 33%;}
+                frame3 {float: left; width: 33%; background-color: #bbb;}
             </style>
-
     </head>
-
     <body>
         <h1 id="h1">10 Best National Parks in the United States</h1>
+            <container class="container">
+            <div class="frame1">frame1</div>
+            <div class="frame2">frame2</div>
+            <div class="frame3">frame3</div>
+            </container>
             <dl>
                 <button>button</button>
                 <hr>
@@ -139,35 +146,35 @@
                 </div>
                 <hr>
             </dl>
-
         <script src="js/jquery-3.5.1.js"></script>
         <script>
             $(document).ready(function() {
                 console.log("ready");
 
-                $("#h1").css({"color": "blue", "font-style": "italic", "text-decoration": "underline"});
+                $(".container")
+                    .html('<img src="img/sunlight.jpg" alt="sunlight">')
+                    .prepend('<img src="img/trees.jpg" alt="trees">')
+                    .append('<img src="img/waterfall.jpg" alt="waterfall">')
 
+                $("#h1").css({"color": "blue", "font-style": "italic", "text-decoration": "underline"});
                 // last li yellow with button
                 $("li").each(function (index) {
                         $("button").click(function () {
                             $( "ul li:last-child" ).css("background-color", "yellow");
                         });
                 });
-
                 // first li bold with h3 click
                 $("li").each(function (index) {
                     $("h3").click(function () {
                         $( "ul li:first-child" ).css("font-weight", "bold");
                     });
                 });
-
                 // first li of parent ul blue
                 $("li").each(function (index) {
                     $("li").click(function () {
                         $( "li" ).first().css( "color", "blue" );
                     });
                 });
-
                 // toggle functions for <dd>
                 $("dd").addClass("visibility");
 
@@ -178,14 +185,12 @@
                 $("dd").dblclick(function() {
                     $(this).addClass("invisible");
                 });
-
                 $(document).keypress(function(event) {
                     console.log(event);
                     if (event.key === "t") {
                         $("dd").toggleClass("hidden");
                     }
                 });
-
                 // toggle function for <dt>
                 $("dt").addClass("visibility");
 
@@ -196,7 +201,6 @@
                 $("dt").dblclick(function() {
                     $(this).addClass("invisible");
                 });
-
                 $(document).keypress(function(event) {
                     console.log(event);
                     if (event.key === "f") {
