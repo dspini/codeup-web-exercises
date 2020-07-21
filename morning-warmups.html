@@ -255,17 +255,17 @@
 
         //22. Fibonacci
 
-        var fibonacci_series = function (n) {
-                if (n === 1) {
-                return [0, 1];
-            } else {
-                var s = fibonacci_series(n - 1);
-                s.push(s[s.length - 1] + s[s.length - 2]);
-                return s;
-            }
-        };
-
-        console.log(fibonacci_series(20));
+        // var fibonacci_series = function (n) {
+        //         if (n === 1) {
+        //         return [0, 1];
+        //     } else {
+        //         var s = fibonacci_series(n - 1);
+        //         s.push(s[s.length - 1] + s[s.length - 2]);
+        //         return s;
+        //     }
+        // };
+        //
+        // console.log(fibonacci_series(20));
 
         // //23. write a function that takes in three digit numbers and return the digit in the tens spot.
         // const tensSpot = function(threeDigitNum) {
@@ -275,15 +275,24 @@
 
         //24.Write a function that will return an array passed sorted in reverse alphabetical order, when passed an array of strings. It should return null if any element within the array is not a string.
 
-        function reverseArray(array, letter) {
-            var newArray = [];
-            for (let i = 0; i <= array.length - 1; i++) {
-                newArray.push(array[i]);
-            }
+        // function reverseArray(array, letter) {
+        //     var newArray = [];
+        //     for (let i = 0; i <= array.length - 1; i++) {
+        //         newArray.push(array[i]);
+        //     }
+        //
+        //     return newArray;
+        // }
 
-            return newArray;
+        //25. Write a Javascript function that takes in two arguments, and returns whether the first argument is even divisible by the second argumnet, or not. non-number arguments should have the function return null.
+
+        function evenDivisable(num1, num2) {
+            if (typeof num1 === 'number' && typof num2 === 'number') {
+                return num1 % num2 ===0;
+        } else {
+            return null:
         }
-
+        console.log(evenDivisable(21, 7));
 
     </script>
 </body>
