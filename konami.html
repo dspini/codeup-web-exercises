@@ -37,6 +37,7 @@
             var i = 0;
             var lives = parseInt($("#life").text());
             var score = parseInt($("#point").text());
+
             $(document).keyup(function (event) {
                 if (event.keyCode !== konamiCode[i]) {
                     $("#life").css({"color": "red", "font-weight": "bold"});
@@ -51,14 +52,14 @@
                 if (konamiCode.length === i) {
                     lives += 27;
                     score += 20000;
-                    $("#life").html(lives).css({"color": "red", "font-weight": "bold"});
-                    $("#point").html(score).css({"color": "red", "font-weight": "bold"});
+                    $("#life").html(lives).css({"color": "lightgreen", "font-weight": "bold"});
+                    $("#point").html(score).css({"color": "lightgreen", "font-weight": "bold"});
                     i = 0;
                     $("#contra").html('<img src="img/contra.gif">').css("text-align", "center");
-                    alert("Congrats, You are a successful cheater!");
+                    alert("Congrats, You are a good cheater!");
                     new Audio('wav/Contra SFX (1).wav').play();
                     $('.button').click(function(){
-                        window.location.href = 'https://www.playemulator.com/nes-online/contra/';});
+                    window.location.href = 'https://www.playemulator.com/nes-online/contra/';});
                     }
                 });
 
