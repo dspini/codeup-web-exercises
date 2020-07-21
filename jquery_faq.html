@@ -6,8 +6,8 @@
 
             <style>
                 body {background-color: ivory}
-                .visibility {color: red}
-                .invisible {color: black}
+                .visibility {color: black}
+                .invisible {color: red}
                 .hidden {color: green}
             </style>
 
@@ -17,53 +17,53 @@
         <h1 id="h1">10 Best National Parks in the United States</h1>
             <dl>
                 <div>
-                    <dt class="visibility">#1</dt>
-                    <dd class="invisible">Fall Creek Falls State Park, Tennessee</dd>
+                    <dt>#1</dt>
+                    <dd>Fall Creek Falls State Park, Tennessee</dd>
                 </div>
                 <hr>
                 <div>
-                    <dt class="visibility">#2</dt>
-                    <dd class="invisible">Anza Borrego Desert State Park, California</dd>
+                    <dt>#2</dt>
+                    <dd>Anza Borrego Desert State Park, California</dd>
                 </div>
                 <hr>
                 <div>
-                    <dt class="visibility">#3</dt>
-                    <dd class="invisible">Dead Horse Point State Park, Moab, Utah</dd>
+                    <dt>#3</dt>
+                    <dd>Dead Horse Point State Park, Moab, Utah</dd>
                 </div>
                 <hr>
                 <div>
-                    <dt class="visibility">#4</dt>
-                    <dd class="invisible">Pfeiffer Big Sur California State Park, Pfeiffer Big Sur, California</dd>
+                    <dt>#4</dt>
+                    <dd>Pfeiffer Big Sur California State Park, Pfeiffer Big Sur, California</dd>
                 </div>
                 <hr>
                 <div>
-                    <dt class="visibility">#5</dt>
-                    <dd class="invisible">Valley of Fire State Park, Overton, Nevada</dd>
+                    <dt>#5</dt>
+                    <dd>Valley of Fire State Park, Overton, Nevada</dd>
                 </div>
                 <hr>
                 <div>
-                    <dt class="visibility">#6</dt>
-                    <dd class="invisible">Chugach State Park, Girdwood, Alaska</dd>
+                    <dt>#6</dt>
+                    <dd>Chugach State Park, Girdwood, Alaska</dd>
                 </div>
                 <hr>
                 <div>
-                    <dt class="visibility">#7</dt>
-                    <dd class="invisible">Smith Rock State Park, Terrebonne, Oregon</dd>
+                    <dt>#7</dt>
+                    <dd>Smith Rock State Park, Terrebonne, Oregon</dd>
                 </div>
                 <hr>
                 <div>
-                    <dt class="visibility" >#8</dt>
-                    <dd class="invisible">Baxter State Park, Maine</dd>
+                    <dt>#8</dt>
+                    <dd>Baxter State Park, Maine</dd>
                 </div>
                 <hr>
                 <div>
-                    <dt class="visibility">#9</dt>
-                    <dd class="invisible">Custer State Park, Custer, South Dakota</dd>
+                    <dt>#9</dt>
+                    <dd>Custer State Park, Custer, South Dakota</dd>
                 </div>
                 <hr>
                 <div>
-                    <dt class="visibility">#10</dt>
-                    <dd class="invisible">Napali Coast State Wilderness Park, Hawaii</dd>
+                    <dt>#10</dt>
+                    <dd>Napali Coast State Wilderness Park, Hawaii</dd>
                 </div>
                 <hr>
             </dl>
@@ -76,38 +76,38 @@
                 $("#h1").css({"color": "blue", "font-style": "italic", "text-decoration": "underline"});
 
                 // toggle functions for <dd>
-                $(".invisible").addClass("visibility");
+                $("dd").addClass("visibility");
 
-                $(".invisible").click(function() {
+                $("dd").click(function() {
                     $(this).removeClass("invisible");
                 });
 
-                $(".invisible").dblclick(function() {
+                $("dd").dblclick(function() {
                     $(this).addClass("invisible");
                 });
 
                 $(document).keypress(function(event) {
                     console.log(event);
                     if (event.key === "t") {
-                        $(".invisible").toggleClass("hidden");
+                        $("dd").toggleClass("hidden");
                     }
                 });
 
                 // toggle function for <dt>
-                $(".visibility").addClass("invisible");
+                $("dt").addClass("visibility");
 
-                $(".visibility").click(function() {
+                $("dt").click(function() {
                     $(this).removeClass("invisible");
                 });
 
-                $(".visibility").dblclick(function() {
+                $("dt").dblclick(function() {
                     $(this).addClass("invisible");
                 });
 
                 $(document).keypress(function(event) {
                     console.log(event);
                     if (event.key === "f") {
-                        $(".visibility").toggleClass("hidden");
+                        $("dt").toggleClass("hidden");
                     }
                 });
             });
