@@ -16,54 +16,126 @@
     <body>
         <h1 id="h1">10 Best National Parks in the United States</h1>
             <dl>
+                <button>button</button>
+                <hr>
                 <div>
                     <dt>#1</dt>
                     <dd>Fall Creek Falls State Park, Tennessee</dd>
+                    <h3 id="national-parks-heading">Park Facts:</h3>
+                    <ul id="national-parks">
+                        <li>Address: 2009 Village Camp Rd, Spencer, TN 38585</li>
+                        <li>https://www.tnstateparks.com/parks/fall-creek-falls</li>
+                        <li>Phone: (555) 555-5555</li>
+                        <li>Hours of Operation: Seasonal</li>
+                    </ul>
                 </div>
                 <hr>
                 <div>
                     <dt>#2</dt>
                     <dd>Anza Borrego Desert State Park, California</dd>
+                    <h3 id="national-parks-heading">Park Facts:</h3>
+                    <ul id="national-parks">
+                        <li>Address: 200 Palm Canyon Dr, Borrego Springs, CA 92004</li>
+                        <li>https://www.parks.ca.gov/?page_id=638</li>
+                        <li>Phone: (555) 555-5555</li>
+                        <li>Hours of Operation: Seasonal</li>
+                    </ul>
                 </div>
                 <hr>
                 <div>
                     <dt>#3</dt>
                     <dd>Dead Horse Point State Park, Moab, Utah</dd>
+                    <h3 id="national-parks-heading">Park Facts:</h3>
+                    <ul id="national-parks">
+                        <li>UT-313, Moab, UT 84532</li>
+                        <li>https://www.stateparks.utah.gov/parks/dead-horse/</li>
+                        <li>Phone: (555) 555-5555</li>
+                        <li>Hours of Operation: Seasonal</li>
+                    </ul>
                 </div>
                 <hr>
                 <div>
                     <dt>#4</dt>
                     <dd>Pfeiffer Big Sur California State Park, Pfeiffer Big Sur, California</dd>
+                    <h3 id="national-parks-heading">Park Facts:</h3>
+                    <ul id="national-parks">
+                        <li>Address: Pfeiffer Big Sur Rd, Big Sur, CA 93920</li>
+                        <li>https://www.parks.ca.gov/?page_id=570</li>
+                        <li>Phone: (555) 555-5555</li>
+                        <li>Hours of Operation: Seasonal</li>
+                    </ul>
                 </div>
                 <hr>
                 <div>
                     <dt>#5</dt>
                     <dd>Valley of Fire State Park, Overton, Nevada</dd>
+                    <h3 id="national-parks-heading">Park Facts:</h3>
+                    <ul id="national-parks">
+                        <li>Address: 29450 Valley of Fire Hwy, Overton, NV 89040</li>
+                        <li>https://parks.nv.gov/parks/valley-of-fire</li>
+                        <li>Phone: (555) 555-5555</li>
+                        <li>Hours of Operation: Seasonal</li>
+                    </ul>
                 </div>
                 <hr>
                 <div>
                     <dt>#6</dt>
                     <dd>Chugach State Park, Girdwood, Alaska</dd>
+                    <h3 id="national-parks-heading">Park Facts:</h3>
+                    <ul id="national-parks">
+                        <li>Address: 18620 Seward Hwy, Anchorage, AK 99516</li>
+                        <li>http://dnr.alaska.gov/shared/error/404error.htm</li>
+                        <li>Phone: (555) 555-5555</li>
+                        <li>Hours of Operation: Seasonal</li>
+                    </ul>
                 </div>
                 <hr>
                 <div>
                     <dt>#7</dt>
                     <dd>Smith Rock State Park, Terrebonne, Oregon</dd>
+                    <h3 id="national-parks-heading">Park Facts:</h3>
+                    <ul id="national-parks">
+                        <li>Address: Terrebonne, OR 97760</li>
+                        <li>https://stateparks.oregon.gov/index.cfm?do=park.profile&parkId=36</li>
+                        <li>Phone: (555) 555-5555</li>
+                        <li>Hours of Operation: Seasonal</li>
+                    </ul>
                 </div>
                 <hr>
                 <div>
                     <dt>#8</dt>
                     <dd>Baxter State Park, Maine</dd>
+                    <h3 id="national-parks-heading">Park Facts:</h3>
+                    <ul id="national-parks">
+                        <li>Address: 64 Balsam Dr, Millinocket, ME 04462</li>
+                        <li>https://baxterstatepark.org/</li>
+                        <li>Phone: (555) 555-5555</li>
+                        <li>Hours of Operation: Seasonal</li>
+                    </ul>
                 </div>
                 <hr>
                 <div>
                     <dt>#9</dt>
                     <dd>Custer State Park, Custer, South Dakota</dd>
+                    <h3 id="national-parks-heading">Park Facts:</h3>
+                    <ul id="national-parks">
+                        <li>Address: 13329 US Hwy 16A, Custer, SD 57730</li>
+                        <li>https://gfp.sd.gov/parks/detail/custer-state-park/</li>
+                        <li>Phone: (555) 555-5555</li>
+                        <li>Hours of Operation: Seasonal</li>
+                    </ul>
                 </div>
                 <hr>
                 <div>
                     <dt>#10</dt>
                     <dd>Napali Coast State Wilderness Park, Hawaii</dd>
+                    <h3 id="national-parks-heading">Park Facts:</h3>
+                    <ul id="national-parks">
+                        <li>Address: Wainiha, Kauai, HI 96746</li>
+                        <li>https://dlnr.hawaii.gov/dsp/parks/kauai/napali-coast-state-wilderness-park/</li>
+                        <li>Phone: (555) 555-5555</li>
+                        <li>Hours of Operation: Seasonal</li>
+                    </ul>
                 </div>
                 <hr>
             </dl>
@@ -74,6 +146,27 @@
                 console.log("ready");
 
                 $("#h1").css({"color": "blue", "font-style": "italic", "text-decoration": "underline"});
+
+                // last li yellow with button
+                $("li").each(function (index) {
+                        $("button").click(function () {
+                            $( "ul li:last-child" ).css("background-color", "yellow");
+                        });
+                });
+
+                // first li bold with h3 click
+                $("li").each(function (index) {
+                    $("h3").click(function () {
+                        $( "ul li:first-child" ).css("font-weight", "bold");
+                    });
+                });
+
+                // first li of parent ul blue
+                $("li").each(function (index) {
+                    $("li").click(function () {
+                        $( "li" ).first().css( "color", "blue" );
+                    });
+                });
 
                 // toggle functions for <dd>
                 $("dd").addClass("visibility");
