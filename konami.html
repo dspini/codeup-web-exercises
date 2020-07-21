@@ -13,8 +13,8 @@
         <div class="main_container">
             <div class="flex-container">
                 <h1 class="h1">KONAMI CODE</h1>
-                <h2 class="h2">Username: Mario Bro</h2>
-                <h2 class="h2">Score: 0</h2>
+                <h2 class="h2">Username: Bill Rizer</h2>
+                <h2 class="h2">Score: <span id="point">0</span></h2>
                 <h2 class="h2">Lives: <span id="life">3</span></h2>
                 <div class="button" id="contra"</div>
             </div>
@@ -23,18 +23,20 @@
         <script src="js/jquery-3.5.1.js"></script>
         <script>
 
-            $(".main_container").css({"background-color": "#78B07F", "margin": "4em", "padding": "1em"});
-            $(".h1").css({"background-color": "red", "font-style": "italic",
-                            "padding": ".5em", "text-align": "center", "color": "white"});
+            $(".main_container").css({"background-color": "#7C8E7C", "margin": "4em", "padding": "1em"});
+            $(".h1").css({"background-color": "red", "font-style": "italic", "font-size": "75px",
+                            "padding": ".50em", "padding-top": ".75em", "margin": ".25em", "text-align": "center", "color": "white"});
             $(".h2").css("color", "#0F3314");
             $(".flex-container").css({"justify-content": "center"});
 
             var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
             var i = 0;
             var lives = parseInt($("#life").text());
+            var score = parseInt($("#point").text());
             $(document).keyup(function (event) {
                 if (event.keyCode !== konamiCode[i]) {
                     $("#life").css({"color": "red", "font-weight": "bold"});
+                    $("#point").css({"color": "red", "font-weight": "bold"});
                     alert("Sorry, you are not a good cheater.");
                     i = 0;
                 } else {
@@ -42,7 +44,9 @@
                 }
                 if (konamiCode.length === i) {
                     lives += 27;
-                    $("#life").html(lives).css({"color": "green", "font-weight": "bold"});
+                    score += 20000;
+                    $("#life").html(lives).css({"color": "red", "font-weight": "bold"});
+                    $("#point").html(score).css({"color": "red", "font-weight": "bold"});
                     i = 0;
                     $("#contra").html('<img src="img/contra.gif">').css("text-align", "center");
                     alert("Congrats, You are a successful cheater!");
