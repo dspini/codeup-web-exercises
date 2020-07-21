@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+
+            <style>
+                body {background-color: ivory}
+                .visibility {color: red}
+                .invisible {color: black}
+                .hidden {color: green}
+            </style>
+
+    </head>
+
+    <body>
+        <h1 id="h1">10 Best National Parks in the United States</h1>
+            <dl>
+                <div>
+                    <dt class="visibility">#1</dt>
+                    <dd class="invisible">Fall Creek Falls State Park, Tennessee</dd>
+                </div>
+                <hr>
+                <div>
+                    <dt class="visibility">#2</dt>
+                    <dd class="invisible">Anza Borrego Desert State Park, California</dd>
+                </div>
+                <hr>
+                <div>
+                    <dt class="visibility">#3</dt>
+                    <dd class="invisible">Dead Horse Point State Park, Moab, Utah</dd>
+                </div>
+                <hr>
+                <div>
+                    <dt class="visibility">#4</dt>
+                    <dd class="invisible">Pfeiffer Big Sur California State Park, Pfeiffer Big Sur, California</dd>
+                </div>
+                <hr>
+                <div>
+                    <dt class="visibility">#5</dt>
+                    <dd class="invisible">Valley of Fire State Park, Overton, Nevada</dd>
+                </div>
+                <hr>
+                <div>
+                    <dt class="visibility">#6</dt>
+                    <dd class="invisible">Chugach State Park, Girdwood, Alaska</dd>
+                </div>
+                <hr>
+                <div>
+                    <dt class="visibility">#7</dt>
+                    <dd class="invisible">Smith Rock State Park, Terrebonne, Oregon</dd>
+                </div>
+                <hr>
+                <div>
+                    <dt class="visibility" >#8</dt>
+                    <dd class="invisible">Baxter State Park, Maine</dd>
+                </div>
+                <hr>
+                <div>
+                    <dt class="visibility">#9</dt>
+                    <dd class="invisible">Custer State Park, Custer, South Dakota</dd>
+                </div>
+                <hr>
+                <div>
+                    <dt class="visibility">#10</dt>
+                    <dd class="invisible">Napali Coast State Wilderness Park, Hawaii</dd>
+                </div>
+                <hr>
+            </dl>
+
+        <script src="js/jquery-3.5.1.js"></script>
+        <script>
+            $(document).ready(function() {
+                console.log("ready");
+
+                $("#h1").css({"color": "blue", "font-style": "italic", "text-decoration": "underline"});
+
+                // toggle functions for <dd>
+                $(".invisible").addClass("visibility");
+
+                $(".invisible").click(function() {
+                    $(this).removeClass("invisible");
+                });
+
+                $(".invisible").dblclick(function() {
+                    $(this).addClass("invisible");
+                });
+
+                $(document).keypress(function(event) {
+                    console.log(event);
+                    if (event.key === "t") {
+                        $(".invisible").toggleClass("hidden");
+                    }
+                });
+
+                // toggle function for <dt>
+                $(".visibility").addClass("invisible");
+
+                $(".visibility").click(function() {
+                    $(this).removeClass("invisible");
+                });
+
+                $(".visibility").dblclick(function() {
+                    $(this).addClass("invisible");
+                });
+
+                $(document).keypress(function(event) {
+                    console.log(event);
+                    if (event.key === "f") {
+                        $(".visibility").toggleClass("hidden");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
