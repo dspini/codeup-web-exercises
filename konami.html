@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
-        <head>
-            <title>Konami Code</title>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-                  integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-            <style>
-                .h1, .h2 {font-family: 'Rubik Mono One', sans-serif;}
-                body {background-image: url("img/konami 2.gif")}
-            </style>
-        </head>
+    <head>
+
+        <title>Konami Code</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+              integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <style>
+            .h1, .h2 {font-family: 'Rubik Mono One', sans-serif;}
+            body {background-image: url("img/konami 2.gif")}
+        </style>
+
+    </head>
     <body>
+
         <div class="main_container">
             <div class="flex-container">
                 <h1 class="h1">KONAMI CODE</h1>
@@ -38,6 +42,8 @@
                     $("#life").css({"color": "red", "font-weight": "bold"});
                     $("#point").css({"color": "red", "font-weight": "bold"});
                     alert("Sorry, you are not a good cheater.");
+                    $("#contra").html('<img src="img/duck.gif">').css("text-align", "center");
+                    new Audio('wav/Duck Hunt SFX (11).wav').play();
                     i = 0;
                 } else {
                     i++;
@@ -55,6 +61,7 @@
                         window.location.href = 'https://www.playemulator.com/nes-online/contra/';});
                     }
                 });
+
         </script>
     </body>
 </html>
