@@ -9,6 +9,9 @@
                 .visibility {color: black}
                 .invisible {color: red}
                 .hidden {color: green}
+                .highlighter {color: yellow}
+                .bolded {font-weight: bold}
+                .blued {color: dodgerblue}
                 img {display: block; width: 100%; height: auto;}
                 flex-container{display: flex; width: 100%; font-size: 12px; overflow: hidden; background: #ccc;}
                 flex-container1{display: flex; justify-content: space-around; width: 100%; font-size: 12px; overflow: hidden; background: #ccc;}
@@ -175,25 +178,21 @@
                 $("#h1").css({"text-align": "center", "color": "blue", "font-style": "italic", "text-decoration": "underline"});
 
                 // last li yellow with button
-                $("li").each(function (index) {
-                        $("#button0").click(function () {
-                            $( "ul li:last-child" ).css("background-color", "yellow");
-                        });
+                $("#button0").click(function () {
+                    $("ul").each(function () {
+                        $(this).children().last().toggleClass("highlighter");
+                    });
                 });
 
                 // first li bold with h3 click
-                $("li").each(function (index) {
-                    $("h3").click(function () {
-                        $( "ul li:first-child" ).css("font-weight", "bold");
-                    });
+                $("h3").click(function () {
+                        $(this).next().children().toggleClass("bolded");
                 });
 
                 // first li of parent ul blue
-                $("li").each(function (index) {
                     $("li").click(function () {
-                        $( "li" ).first().css( "color", "blue" );
+                        $(this).parent().children().first().toggleClass("blued");
                     });
-                });
 
                 // toggle functions for <dd>
                 $("dd").addClass("visibility");
