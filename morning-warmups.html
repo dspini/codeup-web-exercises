@@ -303,8 +303,17 @@
         // }
         // console.log(convertInchesToFeet(66));
 
-        //27.
+        //27. Write a function that takes in a string and returns the number of words in the string. Non-string inputs should return null.
 
+        function WordCount(str) {
+            if (typof str === "sring") {
+                return str.split(" ").length;
+            } else {
+                return null;
+            }
+        }
+        console.log(WordCount("hello world"));
+        console.log(WordCount(false));
 
     </script>
 </body>
