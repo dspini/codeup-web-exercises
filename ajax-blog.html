@@ -18,7 +18,8 @@
 
                 <div id="posts"></div>
 
-            <button onClick="window.location.href=window.location.href">Refresh Page</button>
+<!--            <button onClick="window.location.href=window.location.href">Refresh Page</button>-->
+            <button id="reloadBtn" class="btn btn-primary">Reload</button>
 
         </main>
 
@@ -49,6 +50,7 @@
                     $('#posts').html(outputString);
                     }
                     loadPosts();
+
                 $("#reloadBtn").click(loadPosts);
 
             });
