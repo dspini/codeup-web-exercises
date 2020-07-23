@@ -1,0 +1,35 @@
+[
+    {
+        "title": "My First Blog Post",
+        "content": "Sed egestas vulputate facilisis. Aliquam dictum velit varius felis sodales porta at non enim. Donec lobortis lobortis libero non eleifend. Donec fermentum eleifend purus, ut pharetra tortor vulputate sed. Pellentesque egestas risus commodo porta auctor. Nunc eu diam hendrerit, convallis lectus sed, feugiat augue. Duis vestibulum laoreet felis, vitae finibus nibh volutpat ac. Morbi vitae diam viverra, dapibus tellus eu, convallis nisi.",
+        "categories": [
+            "home",
+            "money",
+            "life",
+            "food"
+        ],
+        "date": "July 22, 2020"
+    }, {
+        "title": "My Second Blog Post",
+        "content": "Donec mauris nunc, semper eget lacus quis, commodo blandit tellus. Cras sed lorem consectetur, rutrum neque sed, dictum purus. Ut non placerat nunc. Donec a est id lectus condimentum euismod. Quisque mattis libero ac pulvinar mollis. Curabitur vel malesuada lacus. Duis vel orci faucibus, venenatis enim et, suscipit ligula. Aenean at arcu enim. Sed dignissim nisl ut consectetur egestas.",
+        "categories": [
+            "love",
+            "hate",
+            "friends",
+            "family"
+        ],
+        "date": "July 23, 2020"
+    },
+
+    {
+        "title": "My Third Blog Post",
+        "content": "Vivamus laoreet tristique dolor, nec hendrerit metus laoreet a. Cras pharetra nisl massa, sit amet ullamcorper tellus commodo dapibus. Quisque arcu urna, sagittis sit amet eleifend finibus, lacinia ac risus. Duis massa tellus, venenatis vel risus in, ullamcorper tincidunt ligula. Ut arcu nisl, viverra eu leo ac, tincidunt ullamcorper massa. Fusce ornare lectus ex, interdum rutrum nisl dapibus quis. Sed maximus elementum nisl vitae fermentum.",
+        "categories": [
+            "car",
+            "boat",
+            "bike",
+            "skates"
+        ],
+        "date": "July 25, 2020"
+    }
+]

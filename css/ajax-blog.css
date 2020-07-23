@@ -1,0 +1,46 @@
+body {
+    font-family: Dancing Script, cursive;
+    background-color: brown;
+    margin-top: 5em;
+}
+
+.container{
+    background-color: whitesmoke;
+}
+
+.well {
+   background-color: tan;
+    box-shadow: 5px 10px wheat;
+    border-radius: 5px;
+}
+
+h1 {
+    color: saddlebrown;
+    font-weight: bold;
+    font-size: 90px;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: green;
+}
+
+h4{
+    color: blue;
+}
+
+ul {
+    font-size: 15px;
+}
+
+p {
+    font-size: 25px;
+}
+
+button {
+    color:white;
+    background-color: dodgerblue;
+}
+

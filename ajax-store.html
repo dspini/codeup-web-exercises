@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Store</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+              integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <!-- Your custom css styles go here -->
+        <link rel="stylesheet" href="css/ajax-store.css">
+    </head>
+    <body>
+
+        <h1>My Tool Store</h1>
+
+            <table id="products">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th >Quantity</th>
+                            <th>Price</th>
+                            <th>Categories</th>
+                        </tr>
+                    </thead>
+                <tbody id="insertProducts"></tbody>
+            </table>
+
+            <button onClick="window.location.href=window.location.href">Refresh Page</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        (function() {
+            "use strict";
+
+            // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+            var request = $.get("data/inventory.json");
+
+            request.fail(function(jqXhr, status, error) {
+                console.log("There was an error!");
+                console.log("Response status: " + status);
+                console.log("Error object: " + error);
+            });
+
+            request.done(function(data) {
+                console.log(data);
+
+                data.forEach(function(tool) {
+                    addRowToTable(tool);
+                });
+            });
+
+            // TODO: Take the data from inventory.json and append it to the products table
+            //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+            //             its contents and fields
+            //       HINT: You will want to target #insertProducts for your new HTML elements
+
+        function addRowToTable(tool) {
+            var htmlString = "";
+                htmlString += "<tr>";
+                htmlString += "<td>" + tool.title + "</td>";
+                htmlString += "<td>" + tool.quantity + "</td>";
+                htmlString += "<td>$" + tool.price + "</td>";
+                htmlString += "<td>" + tool.categories + "</td>";
+                htmlString += "</tr>";
+                $("#insertProducts").append(htmlString);
+            }
+
+        })();
+    </script>
+
+    </body>
+</html>
