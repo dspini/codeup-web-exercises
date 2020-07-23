@@ -26,8 +26,8 @@
                 <tbody id="insertProducts"></tbody>
             </table>
 
-<!--            <button onClick="window.location.href=window.location.href">Refresh Page</button>-->
-        <button id="reloadBtn" class="btn btn-primary">Reload</button>
+<!--            <button id="refreshBtn" onClick="window.location.href=window.location.href">Refresh Page</button>-->
+            <button id="reloadBtn" class="btn btn-primary">Reload</button>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script>
@@ -68,7 +68,15 @@
                     $("#insertProducts").append(htmlString);
                 }
 
-                $("#reloadBtn").click(loadPosts);
+                // $("#reloadBtn").click(loadPosts);
+
+                $("#reloadBtn").on("click", function() {
+                       $("#insertProducts").load( "ajax-store.html #insertProducts" );
+                });
+
+                $("#reloadBtn").on("click", function() {
+                    $("#insertProducts").load( "ajax-store.html #insertProducts" );
+                });
 
             })();
         </script>

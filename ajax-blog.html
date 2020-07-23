@@ -51,7 +51,11 @@
                     }
                     loadPosts();
 
-                $("#reloadBtn").click(loadPosts);
+                // $("#reloadBtn").click(loadPosts);
+
+                $("#reloadBtn").on("click", function() {
+                    $("#posts").load( "ajax-blog.html #posts" );
+                });
 
             });
         </script>
