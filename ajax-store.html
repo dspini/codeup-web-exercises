@@ -68,14 +68,8 @@
                     $("#insertProducts").append(htmlString);
                 }
 
-                // $("#reloadBtn").click(loadPosts);
-
                 $("#reloadBtn").on("click", function() {
                        $("#insertProducts").load( "ajax-store.html #insertProducts" );
-                });
-
-                $("#reloadBtn").on("click", function() {
-                    $("#insertProducts").load( "ajax-store.html #insertProducts" );
                 });
 
             })();
