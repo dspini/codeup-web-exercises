@@ -26,57 +26,62 @@
         <container id="container2">
             <section class="container-fluid d-flex flex-row justify-content-around bg-primary my-3">
                 <div id="card0" class="card text-center my-4" style="width: 18rem;">
-                <div id="weatherDate" class="card-header">Weather Date</div>
+                <div id="weatherDate" class="card-header bg-secondary text-light">Weather Date</div>
                     <ul class="list-group list-group-flush">
                         <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
                         <li id="feelsLike" class="list-group-item">Feels Like</li>
                         <li id="humidity" class="list-group-item">Humidity</li>
                         <li id="wind" class="list-group-item">Wind</li>
                         <li id="pressure" class="list-group-item">Pressure</li>
+                        <div class="weather-icon"><img src="http://openweathermap.org/img/wn/10d@2x.png" /></div>
                     </ul>
                 </div>
 
                 <div id="card1" class="card text-center my-4" style="width: 18rem;">
-                    <div id="weatherDate" class="card-header">Weather Date</div>
+                    <div id="weatherDate" class="card-header bg-secondary text-light">Weather Date</div>
                     <ul class="list-group list-group-flush">
                         <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
                         <li id="feelsLike" class="list-group-item">Feels Like</li>
                         <li id="humidity" class="list-group-item">Humidity</li>
                         <li id="wind" class="list-group-item">Wind</li>
                         <li id="pressure" class="list-group-item">Pressure</li>
+                        <div class="weather-icon"><img src="http://openweathermap.org/img/wn/10d@2x.png" /></div>
                     </ul>
                 </div>
 
                 <div id="card2" class="card text-center my-4 " style="width: 18rem;">
-                    <div id="weatherDate" class="card-header">Weather Date</div>
+                    <div id="weatherDate" class="card-header bg-secondary text-light">Weather Date</div>
                     <ul class="list-group list-group-flush">
                         <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
                         <li id="feelsLike" class="list-group-item">Feels Like</li>
                         <li id="humidity" class="list-group-item">Humidity</li>
                         <li id="wind" class="list-group-item">Wind</li>
                         <li id="pressure" class="list-group-item">Pressure</li>
+                        <div class="weather-icon"><img src="http://openweathermap.org/img/wn/10d@2x.png" /></div>
                     </ul>
                 </div>
 
                 <div id="card3" class="card text-center my-4" style="width: 18rem;">
-                    <div id="weatherDate" class="card-header">Weather Date</div>
+                    <div id="weatherDate" class="card-header bg-secondary text-light ">Weather Date</div>
                     <ul class="list-group list-group-flush">
                         <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
                         <li id="feelsLike" class="list-group-item">Feels Like</li>
                         <li id="humidity" class="list-group-item">Humidity</li>
                         <li id="wind" class="list-group-item">Wind</li>
                         <li id="pressure" class="list-group-item">Pressure</li>
+                        <div class="weather-icon"><img src="http://openweathermap.org/img/wn/10d@2x.png" /></div>
                     </ul>
                 </div>
 
                 <div id="card4" class="card text-center my-4" style="width: 18rem;">
-                    <div id="weatherDate" class="card-header">Weather Date</div>
+                    <div id="weatherDate" class="card-header bg-secondary text-light">Weather Date</div>
                     <ul class="list-group list-group-flush">
                         <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
                         <li id="feelsLike" class="list-group-item">Feels Like</li>
                         <li id="humidity" class="list-group-item">Humidity</li>
                         <li id="wind" class="list-group-item">Wind</li>
                         <li id="pressure" class="list-group-item">Pressure</li>
+                        <div class="weather-icon"><img src="http://openweathermap.org/img/wn/10d@2x.png" /></div>
                     </ul>
                 </div>
             </section>
@@ -96,7 +101,7 @@
 
 <!--             Map API-->
             <section class="container-fluid justify-content-around">
-                <div id="map" style='width: auto; height: 1000;'></div>
+                <div id="map" style='width: auto; height: auto;'></div>
             </section>
         </container>
 
@@ -144,6 +149,33 @@
                 marker.remove();
             };
             document.getElementById("btn4").addEventListener("click", btn4);
+
+            // let locationIcon = document.querySelector('.weather-icon'); {
+            //     const {icon} = data.weather[0];
+            //     locationIcon.innerHTML = <img src="icons/${icon}.png">;
+            // }
+
+            // var dorn= "";
+
+            req = $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=SanAntonio,uk&callback=?');
+
+            // rq.then(function(rsp){
+            //     var prefix = "wi wi-";
+            //
+            //     var today = new Date();
+            //     var hour = today.getHours();
+            //
+            //     if (hour > 6 && hour < 20) {
+            //         //Day time
+            //         dorn = "day-";
+            //
+            //     } else {
+            //         //Night time
+            //         dorn ="night-";
+            //     }
+            //     console.log(dorn);
+            //     var code = rsp.weather[0].id;
+            //     iconD = prefix + "owm-" +dorn+ code;
 
         </script>
     </body>
