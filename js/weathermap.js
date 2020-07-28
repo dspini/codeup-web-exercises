@@ -34,9 +34,10 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
         $(cardId + " #pressure").html(pressure + " mBAR");
         console.log(data.daily[i].pressure);
         // Icons
-        let icon = data.daily[i].id;
+        //const icon = `http://openweathermap.org/img/wn/${data.daily[0].weather[0].icon}@4x.png`
+        let icon = data.daily[i].weather.icon;
         $(cardId + "#icon").html(icon);
-        console.log(data.daily[i].id);
+        console.log(data.daily[i].weather.icon);
     }
 });
 
@@ -54,4 +55,6 @@ let map = new mapboxgl.Map({
 
 map.addControl(new mapboxgl.NavigationControl());
 
+
+const icon = `http://openweathermap.org/img/wn/${data.daily[0].weather[0].icon}@4x.png` 
 
