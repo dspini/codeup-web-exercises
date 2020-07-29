@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Weather Map</title>
-        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 
 <!--    API links-->
         <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
-        <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet" />
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet">
 
 <!--     Bootstrap Link-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -17,183 +17,195 @@
 <!--    Jumbtron Bootstrap-->
         <div class="jumbotron jumbotron-fluid" style="background-image: url(img/aerial.jpg); background-size: 100% 100%;">
             <div class="container">
-                <h1 class="display-4 text-body font-weight-bold">WEATHERMAP</h1>
+                <h1 class="display-4 text-body font-weight-bold">OpenWeatherMap</h1>
                 <p class="lead text-light">Five Day Forcast</p>
             </div>
         </div>
 
 <!--        Weather Info Cards-->
-            <container id="container2">
-                <section class="container-fluid d-flex flex-row justify-content-around my-3">
+        <container id="container2">
+            <section class="container-fluid d-flex flex-row justify-content-around my-3">
 
-                    <div id="card" class="card text-center my-4 shadow-lg p-3 mb-5 bg-primary rounded" style="width: 18rem;">
-                        <div id="index0" class="card-header bg-secondary text-light">Weather Date</div>
-                        <ul class="list-group list-group-flush">
-                            <li id="index1" class="list-group-item">High and Low Temp.</li>
-                            <li id="index2" class="list-group-item">Feels Like</li>
-                            <li id="index3" class="list-group-item">Humidity</li>
-                            <li id="index4" class="list-group-item">Wind</li>
-                            <li id="index5" class="list-group-item">Pressure</li>
-                            <div class="weatherIcon"><img src="img/duck.jpeg " class="img-thumbnail mt-3" /></div>
-                        </ul>
-                    </div>
+                <div id="card" class="card text-center my-4 shadow-lg p-3 mb-5 bg-primary rounded-lg" style="width: 18rem;">
+                    <div id="index0" class="card-header bg-secondary text-light">Weather Date</div>
+                    <ul class="list-group list-group-flush">
+                        <li id="index1" class="list-group-item">High and Low Temp.</li>
+                        <li id="index2" class="list-group-item">Feels Like</li>
+                        <li id="index3" class="list-group-item">Humidity</li>
+                        <li id="index4" class="list-group-item">Wind</li>
+                        <li id="index5" class="list-group-item">Pressure</li>
+                        <div class="weatherIcon"><img src="img/duck.jpeg" class="img-thumbnail mt-3"></div>
+                    </ul>
+                </div>
 
-                    <div id="card0" class="card text-center my-4 shadow-lg p-3 mb-5 bg-primary rounded" style="width: 18rem;">
+                <div id="card0" class="card text-center my-4 shadow-lg p-3 mb-5 bg-primary rounded-lg" style="width: 18rem;">
+                <div id="weatherDate" class="card-header bg-secondary text-light">Weather Date</div>
+                    <ul class="list-group list-group-flush">
+                        <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
+                        <li id="feelsLike" class="list-group-item">Feels Like</li>
+                        <li id="humidity" class="list-group-item">Humidity</li>
+                        <li id="wind" class="list-group-item">Wind</li>
+                        <li id="pressure" class="list-group-item">Pressure</li>
+                        <div class="weatherIcon"><img src="http://openweathermap.org/img/wn/10d@4x.png"></div>
+                    </ul>
+                </div>
+
+                <div id="card1" class="card text-center my-4 shadow-lg p-3 mb-5 bg-primary rounded-lg" style="width: 18rem;">
                     <div id="weatherDate" class="card-header bg-secondary text-light">Weather Date</div>
-                        <ul class="list-group list-group-flush">
-                            <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
-                            <li id="feelsLike" class="list-group-item">Feels Like</li>
-                            <li id="humidity" class="list-group-item">Humidity</li>
-                            <li id="wind" class="list-group-item">Wind</li>
-                            <li id="pressure" class="list-group-item">Pressure</li>
-                            <div class="weatherIcon"><img src="http://openweathermap.org/img/wn/10d@4x.png" /></div>
-                        </ul>
-                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
+                        <li id="feelsLike" class="list-group-item">Feels Like</li>
+                        <li id="humidity" class="list-group-item">Humidity</li>
+                        <li id="wind" class="list-group-item">Wind</li>
+                        <li id="pressure" class="list-group-item">Pressure</li>
+                        <div class="Icon"><img src="http://openweathermap.org/img/wn/10d@4x.png"></div>
+                    </ul>
+                </div>
 
-                    <div id="card1" class="card text-center my-4 shadow-lg p-3 mb-5 bg-primary rounded" style="width: 18rem;">
-                        <div id="weatherDate" class="card-header bg-secondary text-light">Weather Date</div>
-                        <ul class="list-group list-group-flush">
-                            <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
-                            <li id="feelsLike" class="list-group-item">Feels Like</li>
-                            <li id="humidity" class="list-group-item">Humidity</li>
-                            <li id="wind" class="list-group-item">Wind</li>
-                            <li id="pressure" class="list-group-item">Pressure</li>
-                            <div class="Icon"><img src="http://openweathermap.org/img/wn/10d@4x.png" /></div>
-                        </ul>
-                    </div>
+                <div id="card2" class="card text-center my-4 shadow-lg p-3 mb-5 bg-primary rounded-lg" style="width: 18rem;">
+                    <div id="weatherDate" class="card-header bg-secondary text-light">Weather Date</div>
+                    <ul class="list-group list-group-flush">
+                        <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
+                        <li id="feelsLike" class="list-group-item">Feels Like</li>
+                        <li id="humidity" class="list-group-item">Humidity</li>
+                        <li id="wind" class="list-group-item">Wind</li>
+                        <li id="pressure" class="list-group-item">Pressure</li>
+                        <div class="weatherIcon"><img src="http://openweathermap.org/img/wn/10d@4x.png"></div>
+                    </ul>
+                </div>
 
-                    <div id="card2" class="card text-center my-4 shadow-lg p-3 mb-5 bg-primary rounded" style="width: 18rem;">
-                        <div id="weatherDate" class="card-header bg-secondary text-light">Weather Date</div>
-                        <ul class="list-group list-group-flush">
-                            <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
-                            <li id="feelsLike" class="list-group-item">Feels Like</li>
-                            <li id="humidity" class="list-group-item">Humidity</li>
-                            <li id="wind" class="list-group-item">Wind</li>
-                            <li id="pressure" class="list-group-item">Pressure</li>
-                            <div class="weatherIcon"><img src="http://openweathermap.org/img/wn/10d@4x.png" /></div>
-                        </ul>
-                    </div>
+                <div id="card3" class="card text-center my-4 shadow-lg p-3 mb-5 bg-primary rounded-lg" style="width: 18rem;">
+                    <div id="weatherDate" class="card-header bg-secondary text-light ">Weather Date</div>
+                    <ul class="list-group list-group-flush">
+                        <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
+                        <li id="feelsLike" class="list-group-item">Feels Like</li>
+                        <li id="humidity" class="list-group-item">Humidity</li>
+                        <li id="wind" class="list-group-item">Wind</li>
+                        <li id="pressure" class="list-group-item">Pressure</li>
+                        <div class="weatherIcon"><img src="http://openweathermap.org/img/wn/10d@4x.png"></div>
+                    </ul>
+                </div>
 
-                    <div id="card3" class="card text-center my-4 shadow-lg p-3 mb-5 bg-primary rounded" style="width: 18rem;">
-                        <div id="weatherDate" class="card-header bg-secondary text-light ">Weather Date</div>
-                        <ul class="list-group list-group-flush">
-                            <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
-                            <li id="feelsLike" class="list-group-item">Feels Like</li>
-                            <li id="humidity" class="list-group-item">Humidity</li>
-                            <li id="wind" class="list-group-item">Wind</li>
-                            <li id="pressure" class="list-group-item">Pressure</li>
-                            <div class="weatherIcon"><img src="http://openweathermap.org/img/wn/10d@4x.png" /></div>
-                        </ul>
-                    </div>
+                <div id="card4" class="card text-center my-4 shadow-lg p-3 mb-5 bg-primary rounded-lg" style="width: 18rem;">
+                    <div id="weatherDate" class="card-header bg-secondary text-light">Weather Date</div>
+                    <ul class="list-group list-group-flush">
+                        <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
+                        <li id="feelsLike" class="list-group-item">Feels Like</li>
+                        <li id="humidity" class="list-group-item">Humidity</li>
+                        <li id="wind" class="list-group-item">Wind</li>
+                        <li id="pressure" class="list-group-item">Pressure</li>
+                        <div id="icon" ><img src="http://openweathermap.org/img/wn/10d@4x.png"></div>
+                    </ul>
+                </div>
 
-                    <div id="card4" class="card text-center my-4 shadow-lg p-3 mb-5 bg-primary rounded " style="width: 18rem;">
-                        <div id="weatherDate" class="card-header bg-secondary text-light">Weather Date</div>
-                        <ul class="list-group list-group-flush">
-                            <li id="highLowTemp" class="list-group-item">High and Low Temp.</li>
-                            <li id="feelsLike" class="list-group-item">Feels Like</li>
-                            <li id="humidity" class="list-group-item">Humidity</li>
-                            <li id="wind" class="list-group-item">Wind</li>
-                            <li id="pressure" class="list-group-item">Pressure</li>
-                            <div id="icon" ><img src="http://openweathermap.org/img/wn/10d@4x.png" /></div>
-                        </ul>
-                    </div>
-
-                </section>
-            </container>
+            </section>
+        </container>
 
 <!--        Navigation Search Input-->
-            <container id="container1" class="container-fluid d-flex">
-                <section>
-                    <nav class="navbar navbar-light bg-light">
-                        <a class="navbar-brand">Search Location by City</a>
-                        <form class="form-inline">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
-                    </nav>
-                </section>
-            </container>
+        <container id="container1" class="container-fluid d-flex mx-3">
+            <section>
+                <nav class="navbar navbar-light bg-light">
+                    <a class="navbar-brand">Search Location by City</a>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0 bg-primary text-light" type="submit">Search</button>
+                    </form>
+                </nav>
+            </section>
+        </container>
 
 <!--        Map API-->
-            <div id="card5" class="bg-primary card align-center my-3" style="width: 100%; height: 1000px">
-                <container class="my-auto mx-auto" id="mapboxgl-canvas-container" style="width: 90%; height: 90%"</container>
-            </div>
-<button id="btn4">Remove Markers</button>
+        <div id="card5" class="bg-primary card align-center my-3" style="width: 100%; height: 1000px">
+            <container class="my-auto mx-auto shadow-lg p-3 mb-5 bg-white rounded" id="mapboxgl-canvas-container" style="width: 90%; height: 90%"</container>
+        </div>
+
 <!--        JS Links-->
-            <script src="js/keys.js"></script>
-            <script src="js/jquery-3.5.1.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-            <script src="js/mapbox-geocoder-utils.js"></script>
+        <script src="js/keys.js"></script>
+        <script src="js/jquery-3.5.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="js/mapbox-geocoder-utils.js"></script>
 
 <!--    Javascript-->
-             <script>
-                 $(document).ready(function() {
-                     "use strict"; // open jQuery tag
+         <script>
+             $(document).ready(function() {
+                 "use strict"; // open tag
 
-                     // Weathermap API jQuery
-                     $.get("http://api.openweathermap.org/data/2.5/onecall", {
-                         APPID: openWeathermapKey,
-                         lat: 29.4241219,
-                         lon: -98.4936282,
-                         units: "imperial",
-                     }).done(function (data) {
-                         console.log(data);
+                 // Weathermap API jQuery
+                 $.get("http://api.openweathermap.org/data/2.5/onecall", {
+                     APPID: openWeathermapKey,
+                     lat: 29.4241219,
+                     lon: -98.4936282,
+                     units: "imperial",
+                 }).done(function (data) {
+                     console.log(data);
 
-                     // Data Weathermap API JS
-                     for (var i = 0; i < 5; i++) {
-                         let cardId = "#card" + i
-                         // Date
-                         let date = new Date(data.daily[i].dt * 1000);
-                         $(cardId + " #weatherDate").html(date.toDateString());
-                         console.log(data.daily[i].dt)
-                         // Temp
-                         let lowTemp = data.daily[i].temp.min;
-                         let highTemp = data.daily[i].temp.max;
-                         $(cardId + " #highLowTemp").html(lowTemp + "°F / " + highTemp + "°F");
-                         console.log(data.daily[i].temp)
-                         // Feels Like
-                         let feelsLike = data.daily[i].feels_like.day;
-                         $(cardId + " #feelsLike").html(feelsLike + "%");
-                         console.log(data.daily[i].feels_like)
-                         // Humidity
-                         let humidity = data.daily[i].humidity;
-                         $(cardId + " #humidity").html(humidity + "°F");
-                         console.log(data.daily[i].humidity)
-                         // Wind
-                         let wind = data.daily[i].wind_speed;
-                         $(cardId + " #wind").html(wind + " MPH");
-                         console.log(data.daily[i].wind_speed)
-                         // Pressure
-                         let pressure = data.daily[i].pressure;
-                         $(cardId + " #pressure").html(pressure + " mBAR");
-                         console.log(data.daily[i].pressure);
-                         }
-                     });
-
-                     // Mapbox API JS
-                     var accessToken = mapboxKey;
-                     mapboxgl.accessToken = accessToken;
-                     mapboxgl.accessToken = mapboxKey;
-                     let map = new mapboxgl.Map({
-                         container: "mapboxgl-canvas-container",
-                         style: 'mapbox://styles/mapbox/streets-v11',
-                         zoom: 12,
-                         center: [-98.4936282, 29.4241219]
-                     });
-                     // Mapbox API Controls
-                     map.addControl(new mapboxgl.NavigationControl());
-
-                     // Weathermap API Icons JS
-                     const icon = `http://openweathermap.org/img/wn/${data.daily[0].weather[0].icon}@4x.png`
-                     for (var i = 0; i < 5; i++) {
-                         let cardId = "#card" + i
-                         let icon = data.daily[i].weather.icon;
-                         $(cardId + "#icon").html(icon);
-                         console.log(data.daily[i].weather.icon);
+                 // Data Weathermap API JS
+                 for (var i = 0; i < 5; i++) {
+                     let cardId = "#card" + i
+                     // Date
+                     let date = new Date(data.daily[i].dt * 1000);
+                        $(cardId + " #weatherDate").html(date.toDateString());
+                            console.log(data.daily[i].dt)
+                     // Temp
+                     let lowTemp = data.daily[i].temp.min;
+                     let highTemp = data.daily[i].temp.max;
+                        $(cardId + " #highLowTemp").html(lowTemp + "°F / " + highTemp + "°F");
+                            console.log(data.daily[i].temp)
+                     // Feels Like
+                     let feelsLike = data.daily[i].feels_like.day;
+                        $(cardId + " #feelsLike").html(feelsLike + "%");
+                            console.log(data.daily[i].feels_like)
+                     // Humidity
+                     let humidity = data.daily[i].humidity;
+                        $(cardId + " #humidity").html(humidity + "°F");
+                            console.log(data.daily[i].humidity)
+                     // Wind
+                     let wind = data.daily[i].wind_speed;
+                        $(cardId + " #wind").html(wind + " MPH");
+                            console.log(data.daily[i].wind_speed)
+                     // Pressure
+                     let pressure = data.daily[i].pressure;
+                        $(cardId + " #pressure").html(pressure + " mBAR");
+                            console.log(data.daily[i].pressure);
                      }
+                 });
 
-                 }); // close jQuery tag
+                 // Mapbox API JS
+                 var accessToken = mapboxKey;
+                 mapboxgl.accessToken = accessToken;
+                 mapboxgl.accessToken = mapboxKey;
+                 let map = new mapboxgl.Map({
+                     container: "mapboxgl-canvas-container",
+                     style: 'mapbox://styles/mapbox/streets-v11',
+                     zoom: 12,
+                     center: [-98.4936282, 29.4241219]
+                 });
+                 // Mapbox API Controls
+                 map.addControl(new mapboxgl.NavigationControl());
+
+                 // Weathermap API Icons JS
+                 let icon = "http://openweathermap.org/img/wn/${data.daily[0].weather[0].icon}@4x.png";
+                 for (var i = 0; i < 5; i++) {
+                     let cardId = "#card" + i
+                     icon = "http://openweathermap.org/img/wn/${data.daily[0].weather[0].icon}@4x.png";
+                     $(cardId + " #icon").html(icon);
+                     console.log(data.daily[i].weather.icon);
+                 }
+
+                 // Navigation Search Input JS
+                 function geocode(search, token) {
+                     var baseUrl = 'https://api.mapbox.com';
+                     var endPoint = '/geocoding/v5/mapbox.places/';
+                     return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+                         .then(function(res) {
+                             return res.json();
+                         }).then(function(data) {
+                             return data.features[0].center;
+                     });
+                 }
+
+             }); // close tag
         </script>
     </body>
 </html>
