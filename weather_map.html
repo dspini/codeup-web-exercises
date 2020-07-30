@@ -8,18 +8,18 @@
 <!--     Bootstrap Link-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-        <!--    API links-->
+<!--    API links-->
         <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
         <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
         <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
         <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css' type='text/css' />
+
         <style>
             body {
                 margin: 0;
                 padding: 0;
             }
-
             #map {
                 position: absolute;
                 top: 0;
@@ -39,7 +39,7 @@
             </div>
         </div>
 
-<!--        Weather Info Cards-->
+<!--    Weather Info Cards-->
         <container id="container2">
             <section class="container-fluid d-flex flex-row justify-content-around my-3">
 
@@ -118,24 +118,10 @@
             </section>
         </container>
 
-<!--        Navigation Search Input-->
-        <container id="container1" class="container-fluid d-flex mx-3">
-            <section>
-                <nav class="navbar navbar-light bg-light">
-                    <a class="navbar-brand">Search Location by City</a>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0 bg-primary text-light" type="submit">Search</button>
-                    </form>
-                </nav>
-            </section>
-        </container>
-
 <!--        Map API-->
 
         <div id="card5" class="bg-primary card align-center my-3" style="width: 100%; height: 1000px">
             <div id="map"></div>
-            <!--           <container id="map" class="my-auto mx-auto shadow-lg p-3 mb-5 bg-white rounded" id="mapboxgl-canvas-container" style="width: 90%; height: 90%"</container>-->
         </div>
 
 <!--        JS Links-->
