@@ -42,37 +42,83 @@ $(document).ready(function() {
     });
 
     // Mapbox API JS
-    var accessToken = mapboxKey;
-    mapboxgl.accessToken = accessToken;
-    mapboxgl.accessToken = mapboxKey;
-    let map = new mapboxgl.Map({
-        container: "mapboxgl-canvas-container",
-        style: 'mapbox://styles/mapbox/streets-v11',
-        zoom: 12,
-        center: [-98.4936282, 29.4241219]
+    mapboxgl.accessToken = mapboxKey
+    var map = new mapboxgl.Map({
+        container: 'map', // Container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // Map style to use
+        center: [-122.25948, 37.87221], // Starting position [lng, lat]
+        zoom: 12, // Starting zoom level
+    });
+
+    var marker = new mapboxgl.Marker() // Initialize a new marker
+        .setLngLat([-122.25948, 37.87221]) // Marker [lng, lat] coordinates
+        .addTo(map); // Add the marker to the map
+
+    var geocoder = new MapboxGeocoder({ // Initialize the geocoder
+        accessToken: mapboxgl.accessToken, // Set the access token
+        mapboxgl: mapboxgl, // Set the mapbox-gl instance
+        marker: false, // Do not use the default marker style
+        placeholder: 'Search for places in Berkeley', // Placeholder text for the search bar
+        bbox: [-122.30937, 37.84214, -122.23715, 37.89838], // Boundary for Berkeley
+        proximity: {
+            longitude: -122.25948,
+            latitude: 37.87221
+        } // Coordinates of UC Berkeley
+    });
+
+    // Add the geocoder to the map
+    map.addControl(geocoder);
+
+    // After the map style has loaded on the page,
+    // add a source layer and default styling for a single point
+    map.on('load', function() {
+        map.addSource('single-point', {
+            type: 'geojson',
+            data: {
+                type: 'FeatureCollection',
+                features: []
+            }
+        });
+
+        map.addLayer({
+            id: 'point',
+            source: 'single-point',
+            type: 'circle',
+            paint: {
+                'circle-radius': 10,
+                'circle-color': '#448ee4'
+            }
+        });
+
+        // Listen for the `result` event from the Geocoder
+        // `result` event is triggered when a user makes a selection
+        // Add a marker at the result's coordinates
+        geocoder.on('result', function(ev) {
+            map.getSource('single-point').setData(ev.result.geometry);
+        });
     });
     // Mapbox API Controls
-    map.addControl(new mapboxgl.NavigationControl());
+    //map.addControl(new mapboxgl.NavigationControl());
 
     // Weathermap API Icons JS
-    let icon = "http://openweathermap.org/img/wn/${data.daily[0].weather[0].icon}@4x.png";
-    for (var i = 0; i < 5; i++) {
-        let cardId = "#card" + i
-        icon = "http://openweathermap.org/img/wn/${data.daily[0].weather[0].icon}@4x.png";
-        $(cardId + " #icon").html(icon);
-        console.log(data.daily[i].weather.icon);
-    }
+    // let icon = "http://openweathermap.org/img/wn/${data.daily[0].weather[0].icon}@4x.png";
+    // for (var i = 0; i < 5; i++) {
+    //     let cardId = "#card" + i
+    //     icon = "http://openweathermap.org/img/wn/${data.daily[0].weather[0].icon}@4x.png";
+    //     $(cardId + " #icon").html(icon);
+    //     console.log(data.daily[i].weather.icon);
+    // }
 
     // Navigation Search Input JS
-    function geocode(search, token) {
-        var baseUrl = 'https://api.mapbox.com';
-        var endPoint = '/geocoding/v5/mapbox.places/';
-        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
-            .then(function(res) {
-                return res.json();
-            }).then(function(data) {
-                return data.features[0].center;
-            });
-    }
+    // function geocode(search, token) {
+    //     var baseUrl = 'https://api.mapbox.com';
+    //     var endPoint = '/geocoding/v5/mapbox.places/';
+    //     return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+    //         .then(function(res) {
+    //             return res.json();
+    //         }).then(function(data) {
+    //             return data.features[0].center;
+    //         });
+    // }
 
 }); // close tag
