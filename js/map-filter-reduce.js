@@ -42,31 +42,50 @@ const users = [
 // 2. Use .filter to create an array of user objects where each user object has
 // at least 3 languages in the languages array.
 
-var evens = numbers.filter(function(n) {
-    return n % 2 === 0;
-});
-console.log(evens);
+let filtered = users.filter((user) => user.languages.length > 2); 
+ 
+console.log(filtered);
 
 // 3. Use .map to create an array of strings where each element is a user's email address
 
-var incremented = numbers.map(function(n) {
-    return n + 1;
-});
-console.log(incremented);
+let emails = users.map((user) => user.email);
+
+console.log(emails);
 
 // 4. Use .reduce to get the total years of experience from the list of users.
 // Once you get the total of years you can use the result to calculate the average.
 
-const totalSales = salesPeople.reduce((total, person) => {
-    return total + person.sales;
-}, 0);
+let totalYears = users.reduce((a, user) => a + user.yearsOfExperience, 0);
+
+console.log(totalYears / users.length);
 
 // 5. Use .reduce to get the longest email from the list of users.
 
+let longestEmail = users.reduce((a, user) => {
+    if (user.email.length > a.length)
+        return user.email;
+    else
+        return a;
+}, '');
+
+console.log(longestEmail)
 
 // 6. Use .reduce to get the list of user's names in a single string.
 // Example: Your instructors are: ryan, luis, zach, fernando, justin.
 
+let userNames = users.reduce((a, user) => {
+    a.push(user.name);
+    return a;
+}, []).join(', ');
+
+console.log(userNames);
 
 //Bonus
 // 1. Use .reduce to get the unique list of languages from the list of users.
+
+let userLanguages = users.reduce((a, user) => {
+    a.push(user.languages);
+    return a;
+}, []).join(', ');
+
+console.log(userLanguages);
