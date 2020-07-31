@@ -8,90 +8,90 @@
     <script>
         // 1.Write a JavaScript function that takes in a number and returns the number multiplied by 5.
 
-        function multiplyNumberByFive(num) {
-            return num * 5;
-        }
+        // function multiplyNumberByFive(num) {
+        //     return num * 5;
+        // }
         //console.log(multiplyNumberByFive(5));
 
         // 2.Write a function that sings “Happy Birthday” Make it sing to whoever’s birthday it is.
 
-        function singHappyBirthday(name) {
-            console.log("Happy Birthday to you");
-            console.log("Happy Birthday to you");
-            console.log("Happy Birthday dear + name");
-            console.log("Happy Birthday to you!!!");
-        }
+        // function singHappyBirthday(name) {
+        //     console.log("Happy Birthday to you");
+        //     console.log("Happy Birthday to you");
+        //     console.log("Happy Birthday dear + name");
+        //     console.log("Happy Birthday to you!!!");
+        // }
         //singHappyBirthday("name")//
 
         // 3.Write a js function that will take in a number and from there count the next 5 numbers.
-        function countUp5(num) {
-            for (let i=0;i<5;i++) {
-                console.log(num+i);
-            }
-        }
+        // function countUp5(num) {
+        //     for (let i=0;i<5;i++) {
+        //         console.log(num+i);
+        //     }
+        // }
         //countUp5(5);
 
         // 4. Wright a function that returns the number 7.
 
-        function returnSeven() {
-            return 7;
-        }
+        // function returnSeven() {
+        //     return 7;
+        // }
 
         //console.log(returnSeven());
 
         // 5. write a function that returns the length of a string passed through it.
 
-        function stringLength(str) {
-            return str. length;
-        }
+        // function stringLength(str) {
+        //     return str. length;
+        // }
 
         //console.log(stringLength("Howdy Codeup!"));
 
         //6. Write a JavaScript function that returns the number of characters in a string passed through it.
 
-        function numberCharactersOfString(str) {
-            return stringLength(str);
-        }
+        // function numberCharactersOfString(str) {
+        //     return stringLength(str);
+        // }
 
         // console.log (stringLength("Howdy Codeup!"));
 
         //7. Write a JavaScript function that will return the diameter of a circle with a radius of the radius passed through it.
 
-        function calculateDiameter(radius) {
-            return radius*2;
-        }
+        // function calculateDiameter(radius) {
+        //     return radius*2;
+        // }
 
         //console.log(calculateDiameter(10));
 
         //8. Write a JavaScript function that will return the square root of a number passed through it.
 
-        function squareRootOfNumber(num) {
-            return Math.sqrt(num);
-        }
+        // function squareRootOfNumber(num) {
+        //     return Math.sqrt(num);
+        // }
 
         //console.log(squareRootOfNumber(9));
 
         //9. Write a JavaScript function that returns the argument passed.
 
-        function returnArgument(param) {
-            return param;
-        }
+        // function returnArgument(param) {
+        //     return param;
+        // }
 
         //console.log(returnArgument("Hello World"));
 
         //10.Write a JavaScript function that returns a string representing the type of the argument passed through it.
 
-        function typeOfInput(input) {
-            return typeof input;
-        }
+        // function typeOfInput(input) {
+        //     return typeof input;
+        // }
 
         //console.log (typeOfInput(99));
 
         //11. Write a JavaScript function that returns a boolean true if a number passed through it is even.
 
-        function isEven(number) {
-            return number % 2 === 0;
-        }
+        // function isEven(number) {
+        //     return number % 2 === 0;
+        // }
 
         //console.log(isEven());
 
@@ -174,15 +174,15 @@
 
         //17.  Write a JS function that will loop through the numbers 1-10 and output whether each is even or odd. Ie:
 
-        function isOddOrEven() {
-            for (let i = 1; i <= 10; i++) {
-                if (i % 2 !== 0) {
-                    console.log(i + " is an odd number.");
-                } else {
-                    console.log(i + " is an even number.");
-                }
-            }
-        }
+        // function isOddOrEven() {
+        //     for (let i = 1; i <= 10; i++) {
+        //         if (i % 2 !== 0) {
+        //             console.log(i + " is an odd number.");
+        //         } else {
+        //             console.log(i + " is an even number.");
+        //         }
+        //     }
+        // }
         //isOddOrEven();
 
         //18. Given a string, you have to return a string in which each character (case Sensitive is repeatedonce.
@@ -203,15 +203,15 @@
         //     return returnString;
         // }
 
-        str = ("string", "Hello World", "1234!_");
-        function doubleChar(str) {
-            let returnString = "";
-            for (var i = 0; i < string.length; i++) {
-                returnString += str[i] + str[i]
-                console.log(returnString);
-            }
-            return returnString;
-        }
+        // str = ("string", "Hello World", "1234!_");
+        // function doubleChar(str) {
+        //     let returnString = "";
+        //     for (var i = 0; i < string.length; i++) {
+        //         returnString += str[i] + str[i]
+        //         console.log(returnString);
+        //     }
+        //     return returnString;
+        // }
 
         // 19. Using Number.isInteger() and Number.MAX_SAFE_INTEGER
         // Write a function, isPrime(), to take in one argument and return
@@ -334,6 +334,50 @@
         // fizzbuzz(31);
         // fizzbuzz(4);
         // fizzbuzz("one");
+
+        //29. Using the reduce method, set a variable for the element from the array posted in Slack that has the largest heightInMM property.
+        var hamsters = [
+            {
+                name: "Hamtaro",
+                heightInMM: 86,
+                fur: ['orange', 'white'],
+                gender: "male",
+                dateOfBirth: "August 6"
+            } , {
+                name: "Bijou",
+                heightInMM: 75,
+                fur: ['white'],
+                gender: "female",
+                dateOfBirth: "July 10"
+            } , {
+                name: "Oxnard",
+                heightInMM: 100,
+                fur: ['grey', 'white'],
+                gender: "male",
+                dateOfBirth: "May 3"
+            } , {
+                name: "Boss",
+                heightInMM: 120,
+                fur: ['brown', 'white'],
+                gender: "male",
+                dateOfBirth: "Spetember 21"
+            } , {
+                name: "Snoozer",
+                heightInMM: 85,
+                fur: ['brown', 'white', "pink"],
+                gender: "male",
+                dateOfBirth: "January 14"
+            }
+        ];
+
+        let tallestHamster = hamsters.reduce((tallHamster, hamster) => {
+            if (hamster.heightInMM > tallHamster.heightInMM)
+                return hamster;
+            else
+                return tallHamster;
+        }, {heightInMM: 0});
+
+        console.log(tallestHamster);
 
     </script>
 </body>
