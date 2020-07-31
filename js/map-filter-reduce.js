@@ -38,7 +38,6 @@ const users = [
     }
 ];
 
-
 // 2. Use .filter to create an array of user objects where each user object has
 // at least 3 languages in the languages array.
 
@@ -56,8 +55,8 @@ console.log(emails);
 // Once you get the total of years you can use the result to calculate the average.
 
 let totalYears = users.reduce((a, user) => a + user.yearsOfExperience, 0);
-
-console.log(totalYears / users.length);
+let averageYears = totalYears / users.length;
+console.log(totalYears, averageYears);
 
 // 5. Use .reduce to get the longest email from the list of users.
 
@@ -86,4 +85,3 @@ console.log(userNames);
 let Languages = Array.from(new Set(users.reduce((a, user) => { a.push(...user.languages); return a; },[] )));
 
 console.log(Languages);
-
