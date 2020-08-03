@@ -24,7 +24,7 @@ let getLastCommit = (username) => {
                             if(event.type === "pushEvent") {
                                 let localeString = new Data(event.create_at). toLocalString("en-US");
                                 let commit = event.payload.commits[0];
-                                console.log(`last Commit Made by ${username} at ${localeString}:\n${commit.sha.slice(-5)} - ${commit.massage}`)
+                                console.log(`last Commit Made by ${username} at ${localeString}:\n${commit.sha.slice(-5)} - ${commit.message}`);
                                 break;
                                 }
                             }
@@ -32,7 +32,8 @@ let getLastCommit = (username) => {
                     }
                 );
             }
-getLastCommit('dspini');
+//getLastCommit('dspini');
+console.log(getLastCommit('dspini'))
 
 // Create Your Own Promise
 // 1. Write a function named wait that accepts a number as a parameter, and returns a promise that resolves after the
