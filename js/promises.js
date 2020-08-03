@@ -32,8 +32,8 @@ let getLastCommit = (username) => {
                     }
                 );
             }
-//getLastCommit('dspini');
-console.log(getLastCommit('dspini'))
+getLastCommit('dspini');
+//console.log(getLastCommit('dspini'))
 
 // Create Your Own Promise
 // 1. Write a function named wait that accepts a number as a parameter, and returns a promise that resolves after the
